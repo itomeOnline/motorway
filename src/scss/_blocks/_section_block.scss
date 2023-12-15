@@ -1,0 +1,177 @@
+.section_block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	&--center {
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		width: 100%;
+
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		font-family: $title-font;
+		font-size: em(48);
+		font-weight: 700;
+		line-height: em(50,48);
+		color: #242424;
+
+		@media(max-width: 500px) {
+			font-size: em(26);
+			line-height: em(30,26);
+		}
+
+		.main_section & {
+			font-size: em(54);
+			line-height: em(60,54);
+			color: white;
+
+			@media(max-width: 500px) {
+				font-size: em(26);
+				line-height: em(30,26);
+
+				text-align: center;
+			}
+		}
+	}
+
+	&__text {
+		font-family: $text-font;
+		font-size: em(16);
+		font-weight: 300;
+		line-height: em(24,16);
+		color: #6A6A6A;
+
+		margin-top: 1em;
+
+		@media(max-width: 500px) {
+			font-size: em(12);
+			line-height: em(18,12);
+		}
+
+		.strong {
+			font-weight: 600;
+			color: $c-primary;
+		}
+
+		.main_section & {
+			font-size: em(18);
+			line-height: em(26,18);
+			color: white;
+
+			@media(max-width: 500px) {
+				font-size: em(14);
+				line-height: em(20,14);
+
+				text-align: center;
+			}
+		}
+
+		& + & {
+			margin-top: em(10);
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		margin-top: 2rem;
+
+		@media(max-width: 500px) {
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+
+	&__button {
+
+		& + & {
+			margin-left: 1em;
+
+			@media(max-width: 500px) {
+				width: 100%;
+				margin-top: 1em;
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: $c-primary;
+		font-weight: 700;
+		text-decoration: underline;
+
+		transition: color .25s;
+		
+		&:hover {
+			color: black;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+
+		@media(max-width: 500px) {
+			display: none;
+		}
+	}
+
+	&__nav_button {
+		width: 32px;
+		height: 32px;
+		border: 1px solid none;
+		border-radius: 50%;
+
+		text-align: center;
+
+		background: #323232;
+
+		transition: border .25s, background .25s;
+
+		&.swiper-button-disabled {
+			border: 1px solid #D9D9D9;
+
+			background: none;
+
+			svg {
+				width: 30%;
+				height: 100%;
+	
+				fill: #D9D9D9;
+			}
+
+		}
+
+
+		& + & {
+			margin-left: .5rem;
+		}
+
+		svg {
+			width: 30%;
+			height: 100%;
+
+			fill: #D9D9D9;
+
+			.related_products & {
+
+				fill: black
+				
+			}
+		}
+
+		&--prev {
+
+			svg {
+				transform: scaleX(-1);
+			}
+		}
+
+		
+	}
+}

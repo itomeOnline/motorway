@@ -1,0 +1,21 @@
+.not_found {
+
+    &__container {
+        height: 100%;
+
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: em(60) 0 em(180);
+
+        @media(max-width: 500px) {
+            padding: em(40) 1.5em em(60);
+        }
+    }
+
+    &__button {
+        width: em(224,16);
+        height: em(56,16);
+    }
+}

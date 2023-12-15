@@ -1,0 +1,130 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+
+    @media(max-width: 500px) {
+        // overflow: visible;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        margin-top: em(50);
+
+        @media(max-width: 500px) {
+            flex-direction: column;
+            margin-top: em(24);
+        }
+    }
+
+    &__scroll {
+        opacity: 1!important;
+        flex: 1;
+        height: 2px;
+        border-radius: 3px;
+        background: #ECECEC;
+
+        @media(max-width: 500px) {
+            width: 100%;
+            flex: auto;
+        }
+
+        
+        .swiper-scrollbar-drag {
+            height: 100%;
+            background: #242424;
+            border-radius: 3px;
+        }
+    }
+
+    &__pagination {
+        font-family: $text-font;
+        font-size: em(18);
+        line-height: dm(22,18);
+        font-weight: 300;
+        color: $c-primary;
+
+        margin: 0 em(15);
+
+        &.swiper-pagination-lock {
+            display: none;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        // height: 22px;
+
+        @media(max-width: 500px) {
+            // margin-left: 0;
+            // margin-top: em(20);
+        }
+    }
+
+    &__button {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+
+        border: 1px solid #242424;
+        border-radius: 50%;
+        background: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+
+        transition: border .2s, background .2s;
+
+        &--prev {
+            transform: scaleX(-1);
+        }
+
+        &:hover {
+            background: $c-primary;
+            svg {
+                fill: white;
+            }
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: #242424;
+            transition: fill .2s;
+
+            .main_section & {
+                fill: white;
+            }
+        }
+
+        .main_section & {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid #FFFFFF;
+        }
+
+        &.swiper-button-lock {
+            display: none;
+        }
+
+        &.swiper-button-disabled {
+            pointer-events: none;
+            border: 1px solid #C4C4C4;
+
+            svg {
+                fill: #C4C4C4;
+            }
+        }
+
+        & + & {
+            margin-left: 1em;
+
+            svg {
+                // transform: scaleX(-1);
+            }
+        }
+    }
+}

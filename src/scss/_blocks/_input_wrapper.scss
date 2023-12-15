@@ -1,0 +1,184 @@
+$paddingSide: 16px;
+$paddingTop: 1em;
+$width: 100%;
+$height: 3.5em;
+$bg-color: white;
+$border-r: 8px; 
+$bg-color-main: #eeeded;
+$bg-color-error: #FBE4E3;
+
+.input_wrapper {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	width: $width;
+	height: $height;
+
+	box-shadow: none;
+
+	& + & {
+		margin-left: 1em;
+	}
+
+	&--filled {
+
+		.input_wrapper__input:focus + .input_wrapper__label,
+		.input_wrapper__input.is-filled + .input_wrapper__label {
+			transform: translate3d(-10%, -120%, 0) scale(.8);
+		}
+
+	}
+
+	&--outlined {
+
+		.input_wrapper__input:focus + .input_wrapper__label,
+		.input_wrapper__input.is-filled + .input_wrapper__label {
+			transform: translate3d(-6%, calc(-2em - 30%), 0) scale(.9);
+		}
+
+	}
+
+	&--minimalistic {
+
+		.input_wrapper__input:focus + .input_wrapper__label,
+		.input_wrapper__input.is-filled + .input_wrapper__label {
+			transform: translate3d(-6%, calc(-2em - 30%), 0) scale(.9);
+		}   
+
+	}
+
+	&__input {
+		height: 100%;
+		padding: $paddingTop $paddingSide;
+		border: 0 solid transparent;
+		border-radius: $border-r;
+
+		font-size: .95em;
+
+		line-height: 1em;
+
+		background: $bg-color;
+		box-shadow: none;
+
+
+		.input_wrapper--filled & {
+			padding: 1.5em $paddingSide .5em;
+
+			background: white;
+		}
+
+		.input_wrapper--outlined & {
+			background: white;
+		}
+
+		.input_wrapper--minimalistic & {
+			padding-left: 0;
+			border-bottom: 1px solid #87909A;
+			border-radius: 0;
+
+			background: $bg-color-main;
+		}
+
+
+
+		.input_wrapper--filled.not-valid & {
+			background: black;
+			background: $bg-color-error;
+		}
+
+		.input_wrapper--outlined.not-valid & {
+			background: $bg-color-main;
+			box-shadow: inset 0 0 0 1px $c-error;
+		}
+			
+		.input_wrapper--minimalistic.not-valid & {
+			border-bottom: 1px solid $c-error;
+
+			background: none;
+		}
+		
+	}
+
+	&__label {
+		position: absolute;
+		top: 50%;
+
+		font-weight: 300;
+
+		font-size: 1em;
+		line-height: 1em;
+
+		box-shadow: none;
+
+		transform: translate3d(0, -50%, 0);
+
+		transition: transform .25s;
+
+		pointer-events: none;
+        
+		.input_wrapper--filled & {
+			left: $paddingSide;
+		}
+
+		.input_wrapper--outlined & {
+			left: $paddingSide;
+		}
+
+		.input_wrapper--minimalistic & {
+			left: 0;
+		}
+
+		.input_wrapper--filled.not-valid & {
+			transform: translate3d(-10%, -120%, 0) scale(.8);
+		}
+
+		.input_wrapper--outlined.not-valid & {
+			color: $c-error;
+
+			background: $bg-color-main;
+			transform: translate3d(-6%, calc(-2em - 30%), 0) scale(.9);
+		}
+			
+		.input_wrapper--minimalistic.not-valid & {
+			color: $c-error;
+
+			transform: translate3d(-6%, calc(-2em - 30%), 0) scale(.9);
+		}
+	}
+
+	&__tooltip {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		color: $c-error;
+		font-weight: 300;
+		font-size: .75em;
+
+		transform: translate3d(0, 150%, 0);
+
+		opacity: 0;
+
+		transition: opacity .25s;
+
+		.input_wrapper--filled & {
+			left: $paddingSide;
+		}
+
+		.input_wrapper--outlined & {
+			left: $paddingSide;
+		}
+
+		.input_wrapper--minimalistic & {
+			left: 0;
+		}
+
+		.not-valid & {
+			opacity: 1;
+		}
+	}
+}
+
+

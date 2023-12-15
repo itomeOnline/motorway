@@ -1,0 +1,160 @@
+.modal_form {
+	position: absolute;
+
+	width: em(388);
+	height: fit-content;
+	top: 50%;
+	left: 50%;
+	
+	padding: em(30);
+	border-radius: 16px;
+
+	overflow: hidden;
+	background: white;
+	box-shadow: 0px 9px 48px rgba(0, 0, 0, 0.03);
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	
+	transform: translate3d(-50%, calc(-50% + 2em), 0);
+	opacity: 0;
+
+	transition: transform .35s, opacity .35s;
+
+	@media(max-width: 500px) {
+		width: 90vw;
+		padding: em(20);
+	}
+
+	&__success {
+		align-items: center;
+	}
+
+
+	&.is-active {
+		transform:  translate3d(-50%, -50%, 0);
+		opacity: 1;
+		pointer-events: all;
+
+		.modal_form__inputs.is-active {
+			pointer-events: all;
+		}
+	}
+
+	&.on-request {
+		pointer-events: none;
+		opacity: .6;
+	}
+
+	// &.modal_offers {
+	// 	width: em(956); 
+
+	// 	@media(max-width: 500px) {
+	// 		width: 90vw;
+	// 		padding: em(24) em(24) em(20) em(24);
+	// 	}
+	// }
+
+	// &.modal_presentation {
+	// 	width: em(457);
+
+	// 	@media(max-width: 500px) {
+	// 		width: 90vw;
+	// 		padding: em(24) em(20) em(20) em(20);
+	// 	}
+	// }
+
+
+	&__close {
+		top: em(16);
+		right: em(16);
+
+		width: 12px;
+		height: 12px;
+		padding: 0;
+		background: transparent;
+
+		.icon {
+			fill: #242424;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		width: 100%;
+	}
+
+	&__icon {
+		width: em(200);
+		height: em(200);
+		margin-top: em(30);
+
+		background: #F4F4F4;
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.image {
+			width: em(100);
+			height: em(100);
+		}
+	}
+
+	&__title {
+		font-family: $title-font;
+		font-weight: 700;
+		font-size: em(22);
+		line-height: em(32,22);
+		color: $c-primary;
+
+		@media(max-width: 500px) {
+			font-size: em(18);
+			line-height: em(26,18);
+		}
+	}
+
+	&__text {
+		font-family: $text-font;
+		font-size: em(16);
+		font-weight: 300;
+		line-height: em(20,16);
+		color: #242424;
+		
+		margin-top: em(4,16);
+
+		@media(max-width: 500px) {
+			font-size: em(12);
+			line-height: em(18,12);
+
+			margin-top: em(6,12);
+		}
+	}
+
+	&__inputs {
+		margin-top: em(24);
+		width: 100%;
+
+		@media(max-width: 500px) {
+			margin-top: em(16);
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		margin-top: em(24);
+
+		letter-spacing: -0.03em;
+
+		@media(max-width: 500px) {
+			margin-top: em(18,15);
+
+			font-size: em(15);
+			height: em(56,15);
+		}
+	}
+}
