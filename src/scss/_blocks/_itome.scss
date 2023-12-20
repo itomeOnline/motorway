@@ -8,9 +8,12 @@
 
 	color: #ffffff;
 	
+	width: em(96);
+	height: em(20);
 
-	@media(max-width: 500px) {
-		margin-bottom: 1em;
+	@media(max-width: 1260px) {
+		width: em(86);
+		height: em(18);
 	}
 
 	&:hover .itome_tooltip {

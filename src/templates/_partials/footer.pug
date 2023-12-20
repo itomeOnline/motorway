@@ -1,12 +1,67 @@
 footer.footer
-	.footer__container.container
+	form.footer_form(data-form-id="footer_form", action="/mailer", data-mailer="")
+		input(type="hidden", name="form", value="Помощь в подборе авто (подвал сайта)")
 
-	
+		.footer_form__container.container
+			h3.footer_form__title Поможем подобрать авто
 
-		a.itome(href="https://itome.online/", target="_blank")
-			+imgSvg(`${assetsPath}/img/itome-logo.svg`, '', 'image')
-			.itome_tooltip
-				.itome_tooltip__logo
-					+svg('logoCircle', 'svg')
-				span.itome_tooltip__title #айтуми
-				span.itome_tooltip__subtitle digital production
+			.footer_form__form
+				.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+					input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+					label.input_wrapper__label Ваше имя
+					.input_wrapper__tooltip(data-input-tooltip="")
+				.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+					input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+					label.input_wrapper__label Номер телефона
+					.input_wrapper__tooltip(data-input-tooltip="")
+				button.footer_form__btn.btn.btn--black
+					span.btn__text Отправить
+
+	.footer__content
+		.footer__container.container 
+			.footer__main
+				a.footer__logo(href="/")
+					+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+
+				.footer__table
+
+					.footer__column
+						p.footer__caption Авто
+
+						a.footer__link(href="/japan", data-active-link="") Авто из Японии
+						a.footer__link(href="/korea", data-active-link="") Авто из Кореи
+						a.footer__link(href="/china", data-active-link="") Авто из Китая
+						a.footer__link(href="/auc", data-active-link="", target="_blank") Онлайн-аукционы
+
+					.footer__column
+						p.footer__caption Motorway
+
+						a.footer__link(href="/about", data-active-link="") О компании
+						a.footer__link(href="/contacts", data-active-link="") Контакты
+						a.footer__link(href="/faq", data-active-link="") FAQ
+
+					.footer__column
+						p.footer__caption Социальные сети
+
+						a.footer__link(href="", target="_blank") #[+svg('icon_tg', 'icon')] Telegram
+						a.footer__link(href="", target="_blank") #[+svg('icon_vk', 'icon')] ВКонтакте
+						a.footer__link(href="", target="_blank") #[+svg('icon_inst', 'icon')] Instagram
+						a.footer__link(href="", target="_blank") #[+svg('icon_yt', 'icon')] YouTube
+
+					.footer__column
+						p.footer__caption Контакты
+
+						a.footer__link(href="tel:+7 (908) 450-10-05") +7 (908) 450-10-05
+						a.footer__link(href="mailto:motorway-vl@gmail.com") motorway-vl@gmail.com
+						a.footer__link(href="", target="_blank") Владивосток, Нейбута, 87
+						p.footer__caption.footer__caption--small ПН-ПТ 08:00-18:00			
+
+			.footer__bottom
+				p.footer__copyright © 2023 MOTORWAY. #[br.tablet] Все права защищены
+				a.footer__copyright.footer__copyright--link(href="/privacy") Политика конфиденциальности
+				.footer__itome 
+					p.footer__copyright.footer__copyright--itome Сделано в
+					a.itome(href="https://itome.online/", target="_blank")
+						+imgSvg(`${assetsPath}/img/itome_letters.svg`, '', 'image')
+
+				

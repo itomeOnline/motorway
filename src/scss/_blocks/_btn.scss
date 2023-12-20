@@ -1,19 +1,22 @@
-$bg-filled: #2B4BF2;
-$borderR: 8px;
+$bg-filled: $c-primary;
+$borderR: 14px;
 
-$paddingSide: 1.25em;
+$paddingSide: 1.25rem;
 $height: 3.5em;
 
 .btn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 1em $paddingSide;
-	border-radius: $borderR;
-	font-family: $button-font;
 
-	font-weight: 500;
-	line-height: 1em;
+	padding: .875rem $paddingSide;
+	border-radius: $borderR;
+	
+	font-family: $button-font;
+	font-size: em(18);
+	line-height: 1.5rem;
+	font-weight: 600;
+	font-feature-settings: 'clig' off, 'liga' off;
 
 	transition: all .25s;
 
@@ -21,91 +24,72 @@ $height: 3.5em;
 		opacity: .4;
 	}
 
-	// & + & {
-	// 	margin-left: 1em;
-	// }
+	@media(max-width: 1260px) {
+		font-size: em(16);
+		line-height: em(22,16);
+
+		padding: .75rem em(18);
+	}
 
 	&__icon {
-		width: .8em;
-		height: .8em;
-
-		transform: scaleX(1);
+		width: 18px;
+		height: 18px;
 
 		transition: transform .25s;
 
-		&--white {
-			fill: white;
-		}
-
 		&--black {
-			fill: black;
-		}
-
-		&--left {
-			margin-right: .5em;
-
-			transform: scaleX(-1);
+			fill: $c-black;
 		}
 
 		&--right {
-			margin-left: .5em;
+			margin-left: .5rem;
 		}
 	}
 
-	&__pic {
-		width: 1em;
-		height: 1em;
-		margin-left: 3em;
+	&--small {
+		font-size: em(16);
+		line-height: em(20,16);
 
-		transition: transform .25s;
+		padding: em(10) 1em;
 
-		&--white {
-			fill: white;
-		}
+		border-radius: 10px;
 
-		&--black {
-			fill: black;
+		&:hover {
+			background: #fff !important;
 		}
 	}
 
 	&--filled {
-		color: white;
-
+		color: $c-black;
 		background: $bg-filled;
 
 		&:hover {
-			background: darken($bg-filled, 5%);           
+			background: darken($bg-filled, 10%);           
 		}
+	}
 
+	&--black {
+		background: $c-black;
+		color: #fff;
 
+		border: 1px solid $c-black;
+
+		&:hover {
+			//background: $c-primary;
+			background: #fff;
+			color: $c-black;           
+		}
 	}
 
 	&--outlined {
-		border: 1px solid white;
+		background: $c-black;
+		color: $c-primary;
+		border: 1px solid $c-primary;
 
 		&:hover {
-			// box-shadow: inset 0 0 0 1px darken(white, 20%);           
+			background: $c-primary;
+			color: $c-black;           
 		}
 	}
 
-	&--error {
-		color: white;
-
-		background: $c-error;
-
-		&:hover {
-			background: darken($c-error, 5%);           
-		}
-
-	}
-
-	&--succes {
-		color: white;
-
-		background: $c-success;
-
-		&:hover {
-			background: darken($c-success, 5%);           
-		}
-	}
 }

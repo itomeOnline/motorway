@@ -20,7 +20,7 @@ html(lang="ru")
 		link(rel='manifest', href=`${assetsPath}/favicon/site.webmanifest`)
 		link(rel='mask-icon', href=`${assetsPath}/favicon/safari-pinned-tab.svg`, color='#000000')
 		link(rel='shortcut icon', href=`${assetsPath}/favicon/favicon.ico`)
-		meta(name='msapplication-TileColor', content='#ffffff')
+		meta(name='msapplication-TileColor', content='#00aba9')
 		meta(name='msapplication-config', content=`${assetsPath}/favicon/browserconfig.xml`)
 		meta(name='theme-color', content='#ffffff')
 		meta(name="robots" content="noindex, nofollow")
@@ -32,12 +32,6 @@ html(lang="ru")
 		.content
 			include ../_partials/header
 			block content
-			.cookie(data-cookie-tooltip="")
-				.cookie__container.container
-					.cookie__wrap
-						p.cookie__text Мы используем файлы cookies для улучшения работы и повышения эффективности
-						button.cookie__btn.btn.btn--filled_black.btn--center(data-cookie-btn="")
-							span.btn__text Отлично
 			include ../_partials/footer
 
 		block scripts

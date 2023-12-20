@@ -1,4 +1,30 @@
 header.header
 	.header__container.container
-		.header__line 
-			a.header__logo
+		.header__line.header__line--top 
+			a.header__logo(href="/")
+				+imgSvg(`${assetsPath}/img/header_logo.svg`, '', 'image')
+
+			.header__socials
+				a.header__socials_link(href="", target="_blank") #[+svg('icon_inst', 'icon')] Instagram
+				a.header__socials_link(href="", target="_blank") #[+svg('icon_yt', 'icon')] YouTube
+				a.header__socials_link(href="", target="_blank") #[+svg('icon_vk', 'icon')] ВКонтакте
+				a.header__socials_link(href="", target="_blank") #[+svg('icon_tg', 'icon')] Telegram
+
+			.header__buttons 
+				a.header__buttons_phone(href="tel:+7 (908) 450-10-05") +7 (908) 450-10-05
+				button.header__buttons_modal.btn.btn--filled.btn--small(data-linked-modal="modal_calc_auto")
+					span.btn__text Рассчитать авто
+
+				button.header__menu(data-linked-modal="modal_menu")
+					+svg('menu', 'icon')
+					
+		.header__line.header__line--bottom 
+			nav.header__nav
+				a.header__socials_link(href="/japan") Авто из Японии
+				a.header__socials_link(href="/korea") Авто из Кореи
+				a.header__socials_link(href="/china") Авто из Китая
+				a.header__socials_link(href="/about") О компании
+				a.header__socials_link(href="/contacts") Контакты
+				a.header__socials_link(href="/faq") FAQ
+
+			a.header__buttons_phone.header__auc_btn(href="/auc", target="_blank") Перейти на аукцион #[+svg('arrow_right', 'icon')]

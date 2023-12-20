@@ -1,0 +1,219 @@
+.footer {
+    margin-top: em(150);
+    background: $c-black;
+
+    @media(max-width: 1260px) {
+        margin-top: em(120);
+    }
+
+    @media(max-width: 500px) {
+        margin-top: em(80);
+    }
+
+    &__main {
+        padding-top: em(40);
+        padding-bottom: em(212);
+
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+
+        @media(max-width: 1260px) {
+            flex-direction: column;
+            padding-bottom: em(240);
+        }
+
+        @media(max-width: 500px) {
+            padding-top: em(28);
+            padding-bottom: em(60);
+        }
+    }
+
+    &__logo {
+        width: em(190);
+        height: em(110);
+
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .8;
+        }
+
+        @media(max-width: 1260px) {
+            width: em(140);
+            height: em(80);
+        }
+
+        @media(max-width: 500px) {
+            width: em(106);
+            height: em(60);
+        }
+    }
+
+    &__table {
+        width: 70%;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @media(max-width: 1260px) {
+            width: 100%;
+
+            margin-top: em(40);
+            grid-template-columns: 1fr 1fr;
+            gap: em(40);
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+        }
+        
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__caption {
+        font-weight: 500;
+        font-size: em(16);
+        line-height: em(20);
+        color: $c-grey;
+
+        margin-bottom: 1.25rem;
+
+        @media(max-width: 1260px) {
+            font-size: em(14);
+            line-height: em(18,14);
+        }
+
+        &--small {
+            margin-bottom: 0;
+            margin-top: .25rem;
+
+            font-size: em(14);
+            line-height: em(18,14);
+
+            @media(max-width: 1260px) {
+                font-size: em(12);
+                line-height: 1rem;
+
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    &__link {
+        font-family: $text-font;
+        font-weight: 500;
+        font-size: em(18);
+        line-height: em(24,18);
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        width: fit-content;
+
+        transition: color .2s; 
+
+        @media(max-width: 1260px) {
+            font-size: em(16);
+            line-height: em(22,16);
+        }
+
+        &:hover {
+            color: $c-primary;
+
+            .icon {
+                fill: $c-primary;
+            }
+        }
+
+        &.is-active {
+            color: $c-primary;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+
+            margin-right: 0.34em;
+
+            transition: fill .2s;
+        }
+
+        & + & {
+            margin-top: .75rem;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        padding: em(28) 0;
+
+        border-top: 1px solid #313132;
+
+        @media(max-width: 1260px) {
+            padding: em(24) 0;
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+            gap: em(20);
+        }
+    }
+
+    &__itome {
+        display: flex;
+        align-items: center;
+        
+        flex: none;
+
+        margin-left: auto;
+
+        @media(max-width: 500px) {
+            margin: 0;
+        }
+    }
+
+    &__copyright {
+        font-family: $text-font;
+        font-weight: 400;
+        font-size: em(16);
+        line-height: 1.25rem;
+        color: white;
+
+        transition: color .2s;
+
+        width: fit-content;
+        height: fit-content;
+
+        @media(max-width: 1260px) {
+            font-size: em(14);
+            line-height: em(18,14);
+        }
+
+        &--itome {
+            margin-right: .5rem;
+        }
+
+        &--link {
+            margin: auto;
+            
+            @media(max-width: 500px) {
+                margin: 0;
+            }
+
+            &:hover {
+                color: $c-primary;
+            }
+        }
+
+    }
+}

@@ -73,24 +73,24 @@ img {
 
 br.desktop {
 
+	@media(max-width: 1260px) {
+		display: none;
+	}
+}
+
+br.tablet {
+	display: none;
+
+	@media(max-width: 1260px) {
+		display: initial;
+	}
+
 	@media(max-width: 500px) {
 		display: none;
 	}
 }
 
-br.middle {
-
-	@media(max-width: 1440px) {
-		display: none;
-	}
-}
-
 br.medium {
-	display: none;
-
-	@media(max-width: 1440px) {
-		display: initial;
-	}
 
 	@media(max-width: 500px) {
 		display: none;
@@ -165,8 +165,6 @@ br.mobile {
 
 @import "_blocks/multi_select";
 
-@import "_blocks/multi_option";
-
 @import "_blocks/section";
 
 @import "_blocks/section_block";
@@ -189,8 +187,12 @@ br.mobile {
 
 @import "_blocks/preloader";
 
-@import "_blocks/cookie";
-
 @import "_blocks/slider";
 
 @import "_blocks/slider_gallery";
+
+@import "_blocks/footer";
+
+@import "_blocks/footer_form";
+
+@import "_blocks/header";

@@ -8,7 +8,7 @@ import SimpleBar from "simplebar";
 import "simplebar/dist/simplebar.css";
 import ModalDispatcher from "./components/modalDispatcher";
 import formSubmit from "./components/form";
-import cookieTooltip from "./components/cookieTooltip";
+import activeLink from "./components/activeLink";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -16,14 +16,9 @@ setTimeout(() => {
 
 document.addEventListener("DOMContentLoaded", _ => {
     if (!sessionStorage.activeSession) {
-        // setTimeout(_ => {
-        //   document.querySelector('.preloader').classList.add('is-ready');
-        //   sessionStorage.activeSession = 1;
-        // }, 1000)
         
         setTimeout(() => {
             document.querySelector('body').classList.add('disabled');
-            // sessionStorage.setItem('site', 'enter');
         }, 3500)
         
         sessionStorage.activeSession = 1;
@@ -32,9 +27,8 @@ document.addEventListener("DOMContentLoaded", _ => {
     }
 
     formSubmit();
-    cookieTooltip();
     ModalDispatcher.init();
-
+    activeLink();
 
     let scroll = new LocomotiveScroll({ 
         getDirection: true,
