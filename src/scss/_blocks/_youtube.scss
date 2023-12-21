@@ -1,0 +1,45 @@
+.youtube {
+	
+    &__iframe {
+        margin-top: em(52);
+
+        width: 100%;
+        height: em(730);
+
+        border-radius: 28px;
+        overflow: hidden;
+
+        @media(max-width: 1260px) {
+			margin-top: em(40);
+            border-radius: 24px;
+
+            height: em(440);
+		}
+
+		@media(max-width: 500px) {
+			margin-top: em(32);
+
+            height: em(180);
+		}
+    }
+
+    &__table {
+        margin-top: em(28);
+
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: em(28);
+
+        @media(max-width: 1260px) {
+            margin-top: em(20);
+            gap: em(20);
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+            gap: em(16);
+        }
+    }
+}

@@ -12,6 +12,7 @@
 
 html {
 	scroll-behavior: smooth;
+	background: #F5F5F7;
 
 	@media(max-width: 500px) {
 		overflow-x: hidden;
@@ -196,3 +197,25 @@ br.mobile {
 @import "_blocks/footer_form";
 
 @import "_blocks/header";
+
+@import "_blocks/home_table_block";
+
+@import "_blocks/home";
+
+@import "_blocks/countries_card";
+
+@import "_blocks/countries";
+
+@import "_blocks/bosses";
+
+@import "_blocks/general_info_slide";
+
+@import "_blocks/general_info";
+
+@import "_blocks/reviews";
+
+@import "_blocks/reviews_slide";
+
+@import "_blocks/youtube";
+
+@import "_blocks/youtube_block";

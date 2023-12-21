@@ -1,0 +1,51 @@
+section.section.youtube
+	.youtube__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title Подпишись на наш YouTube канал
+			p.section_block__text Снимаем обзоры на авто, которые привозим. Подпишись, смотри и делай выбор
+
+			a.section_block__btn.btn.btn--red.btn--icon_right(href="https://www.youtube.com/@MOTORWAY_VL", target="_blank")
+				span.btn__text Перейти на YouTube
+				+svg("icon_yt", "btn__icon btn__icon--white btn__icon--right")
+
+		
+		<iframe class="youtube__iframe" src="https://www.youtube.com/embed/m2AuvaiS6Yg?si=BJGZqZhuqepV1_wS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+		.youtube__table
+		
+			a.youtube_block(href="", target="_blank")
+				.youtube_block__wrap 
+					.youtube_block__img 
+						+img(`${assetsPath}/img/youtube_pic_1.jpg`, '', 'image')
+					
+					.youtube_block__cover 
+						.youtube_block__btn.btn.btn--white.btn--icon_right(href="https://www.youtube.com/@MOTORWAY_VL", target="_blank")
+							span.btn__text Перейти на YouTube
+							+svg("icon_yt", "btn__icon btn__icon--black btn__icon--right")
+				
+				p.youtube_block__text Обзор машины из Японии
+
+			a.youtube_block(href="", target="_blank")
+				.youtube_block__wrap 
+					.youtube_block__img 
+						+img(`${assetsPath}/img/youtube_pic_2.jpg`, '', 'image')
+					
+					.youtube_block__cover 
+						.youtube_block__btn.btn.btn--white.btn--icon_right(href="https://www.youtube.com/@MOTORWAY_VL", target="_blank")
+							span.btn__text Перейти на YouTube
+							+svg("icon_yt", "btn__icon btn__icon--black btn__icon--right")
+				
+				p.youtube_block__text Обзор машины из Китая
+
+			a.youtube_block(href="", target="_blank")
+				.youtube_block__wrap 
+					.youtube_block__img 
+						+img(`${assetsPath}/img/youtube_pic_3.jpg`, '', 'image')
+					
+					.youtube_block__cover 
+						.youtube_block__btn.btn.btn--white.btn--icon_right(href="https://www.youtube.com/@MOTORWAY_VL", target="_blank")
+							span.btn__text Перейти на YouTube
+							+svg("icon_yt", "btn__icon btn__icon--black btn__icon--right")
+				
+				p.youtube_block__text Обзор машины из Кореи

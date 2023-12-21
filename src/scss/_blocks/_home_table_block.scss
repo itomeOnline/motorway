@@ -1,0 +1,76 @@
+.home_table_block {
+	border-radius: 16px;
+    background: #313132;
+
+    padding: em(16);
+
+    display: flex;
+
+    @media(max-width: 500px) {
+        padding: em(12);
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+
+        margin-right: em(20);
+
+        @media(max-width: 1260px) {
+            width: 44px;
+            height: 44px;
+        }
+
+        @media(max-width: 500px) {
+            width: 36px;
+            height: 36px;
+
+            margin-right: em(16);
+        }
+    }
+
+    &__title {
+        font-size: em(20);
+        line-height: em(24,20);
+        font-weight: 600;
+        font-feature-settings: 'clig' off, 'liga' off;
+        color: #fff;
+
+        @media(max-width: 1260px) {
+            font-size: em(18);
+            line-height: em(22,18);
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(16);
+            line-height: em(20,16);
+        }
+    }
+
+    &__text {
+        font-size: em(16);
+        line-height: em(20,16);
+        font-weight: 400;
+        font-feature-settings: 'clig' off, 'liga' off;
+        color: #D4D4D4;
+
+        margin-top: 4px;
+
+        max-width: em(280);
+
+        @media(max-width: 1260px) {
+            font-size: em(14);
+            line-height: em(18,14);
+
+            max-width: em(240,14);
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(12);
+            line-height: em(16,12);
+
+            max-width: em(180,12);
+        }
+    }
+    
+}

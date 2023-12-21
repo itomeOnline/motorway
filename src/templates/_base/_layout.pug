@@ -28,6 +28,7 @@ html(lang="ru")
 	body
 		include ../../assets/icons.svg
 		.preloader
+			video.video(src=`${assetsPath}/video/preloader_video.mp4`, type="video/mp4", muted="", loop="", playsinline="", autoplay="")
 		include ../_partials/modals
 		.content
 			include ../_partials/header

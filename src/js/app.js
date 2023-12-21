@@ -9,6 +9,8 @@ import "simplebar/dist/simplebar.css";
 import ModalDispatcher from "./components/modalDispatcher";
 import formSubmit from "./components/form";
 import activeLink from "./components/activeLink";
+import genInfoSlider from "./components/sliders/genInfoSlider";
+import reviewsSlider from "./components/sliders/reviewsSlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", _ => {
         
         setTimeout(() => {
             document.querySelector('body').classList.add('disabled');
-        }, 3500)
+        }, 4800)
         
         sessionStorage.activeSession = 1;
     } else {
@@ -29,6 +31,9 @@ document.addEventListener("DOMContentLoaded", _ => {
     formSubmit();
     ModalDispatcher.init();
     activeLink();
+
+    genInfoSlider();
+    reviewsSlider();
 
     let scroll = new LocomotiveScroll({ 
         getDirection: true,

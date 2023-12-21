@@ -1,0 +1,40 @@
+mixin homeTableBlock(icon, title, text)
+	.home_table_block
+		.home_table_block__icon 
+			+imgSvg(icon, '', 'image')
+		.home_table_block__info 
+			p.home_table_block__title= title
+			p.home_table_block__text!= text
+
+section.section.home
+	.home__img.home__img--main
+		+img(`${assetsPath}/img/home_pic_1.png`, '', 'image')
+
+	.home__container.container
+		.section_block
+			h1.section_block__title.section_block__title--white Автомобили из Японии, #[br.medium] Кореи #[br.mobile] и Китая
+			p.section_block__text.section_block__text--white Авто, которые мы привозим, проходят #[br.mobile] независимую экспертизу. #[br.medium] Гарантируем #[br.mobile] реальную оценку и отличное состояние.
+
+		.home__table
+			+homeTableBlock(`${assetsPath}/img/home_icon_1.svg`, 'Честный подбор', 'Вы будете знать точную сумму авто ещё до отправки в Россию, никаких сюрпризов и неожиданных переплат')
+			+homeTableBlock(`${assetsPath}/img/home_icon_2.svg`, 'Понятная схема работы', 'Вы будете знать точную сумму авто ещё до отправки в Россию, никаких сюрпризов и неожиданных переплат')
+			+homeTableBlock(`${assetsPath}/img/home_icon_3.svg`, 'Отлаженная логистика', 'Вы будете знать точную сумму авто ещё до отправки в Россию, никаких сюрпризов и неожиданных переплат')
+
+
+form.footer_form(data-form-id="first_screen_form", action="/mailer", data-mailer="")
+	input(type="hidden", name="form", value="Помощь в подборе авто (первый экран, главная страница)")
+
+	.footer_form__container.container
+		h3.footer_form__title Поможем подобрать авто
+
+		.footer_form__form
+			.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+				input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+				label.input_wrapper__label Ваше имя
+				.input_wrapper__tooltip(data-input-tooltip="")
+			.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+				input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+				label.input_wrapper__label Номер телефона
+				.input_wrapper__tooltip(data-input-tooltip="")
+			button.footer_form__btn.btn.btn--black
+				span.btn__text Отправить

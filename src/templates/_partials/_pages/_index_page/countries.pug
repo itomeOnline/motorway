@@ -1,0 +1,41 @@
+section.section.countries
+	.countries__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title Страны привоза автомобилей
+			p.section_block__text Из Японии и Кореи доставляем по морю, из Китая — автовозом через сухопутную границу
+
+		.countries__content
+		
+			.countries_card
+				.countries_card__info 
+					h3.countries_card__title Япония
+					p.countries_card__text Аукционные автомобили с честным #[br] пробегом и чистой историей
+
+					a.countries_card__btn.btn.btn--filled(href="/japan")
+						span.btn__text Узнать подробнее
+
+				.countries_card__img.countries_card__img--japan
+					+img(`${assetsPath}/img/countries_pic_1.png`, '', 'image')
+
+			.countries_card
+				.countries_card__info 
+					h3.countries_card__title Корея
+					p.countries_card__text Разнообразие корейских и европейских #[br.mobile] марок #[br.medium] авто в различных комплектациях
+
+					a.countries_card__btn.btn.btn--filled(href="/korea")
+						span.btn__text Узнать подробнее
+
+				.countries_card__img.countries_card__img--korea
+					+img(`${assetsPath}/img/countries_pic_2.png`, '', 'image')
+
+			.countries_card
+				.countries_card__info 
+					h3.countries_card__title Китай
+					p.countries_card__text Разнообразие китайских марок авто #[br] в различных комплектациях
+
+					a.countries_card__btn.btn.btn--filled(href="/china")
+						span.btn__text Узнать подробнее
+
+				.countries_card__img.countries_card__img--china
+					+img(`${assetsPath}/img/countries_pic_3.jpg`, '', 'image')

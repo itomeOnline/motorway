@@ -1,0 +1,34 @@
+.general_info {
+	
+    &__slider {
+        margin-top: em(52);
+
+        @media(max-width: 1260px) {
+			margin-top: em(40);
+		}
+
+		@media(max-width: 500px) {
+			margin-top: em(32);
+		}
+    }
+
+    .swiper-wrapper {
+
+        @media(max-width: 500px) {
+            transform: none !important;
+
+            overflow: visible;
+            
+            display: grid;
+            grid-template-columns: 100%;
+            gap: em(20);
+        }
+    }
+
+    &__nav {
+
+        @media(max-width: 500px) {
+            display: none;
+        }
+    }
+}

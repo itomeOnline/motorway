@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <title>MOTORWAY — Автомобили из Японии, Кореи и Китая</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -24,6 +25,14 @@
 	
 		<symbol id="arrow_short" viewBox="0 0 5 8">
 			<path d="M4.94 4l-4-4L0 .94 3.054 4 0 7.06.94 8l4-4z"/>
+		</symbol>
+	
+		<symbol id="arrow_slider" viewBox="0 0 16 16">
+			<path d="M12.636 9.018l-6.4 4A1.2 1.2 0 0 1 4.4 12V4a1.2 1.2 0 0 1 1.836-1.018l6.4 4a1.2 1.2 0 0 1 0 2.036z"/>
+		</symbol>
+	
+		<symbol id="arrow_small" viewBox="0 0 20 20">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M6.845 4.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 0 1-1.06-1.06l4.72-4.72-4.72-4.72a.75.75 0 0 1 0-1.06z"/>
 		</symbol>
 	
 		<symbol id="icon_inst" viewBox="0 0 16 16">
@@ -56,7 +65,9 @@
 	
 </svg>
 
-    <div class="preloader"></div>
+    <div class="preloader">
+      <video class="video" src="/assets/video/preloader_video.mp4" type="video/mp4" muted="" loop="" playsinline="" autoplay=""></video>
+    </div>
     <div class="modals">
       <div class="modal__overlay" id="commonModalOverlay"></div>
     </div>
@@ -94,7 +105,420 @@
           </div>
         </div>
       </header>
-      <main class="view" data-app-layout="view" data-app-layout-namespace="examples"></main>
+      <main class="view" data-app-layout="view" data-app-layout-namespace="examples">
+        <section class="section home">
+          <div class="home__img home__img--main">
+            <picture class="image">
+              <source data-lazy="data-lazy" data-srcset="/assets/img/home_pic_1.webp" type="image/webp"/>
+              <source data-lazy="data-lazy" data-srcset="/assets/img/home_pic_1.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/home_pic_1.png" alt=""/>
+            </picture>
+          </div>
+          <div class="home__container container">
+            <div class="section_block">
+              <h1 class="section_block__title section_block__title--white">Автомобили из Японии, <br class="medium"> Кореи <br class="mobile"> и Китая</h1>
+              <p class="section_block__text section_block__text--white">Авто, которые мы привозим, проходят <br class="mobile"> независимую экспертизу. <br class="medium"> Гарантируем <br class="mobile"> реальную оценку и отличное состояние.</p>
+            </div>
+            <div class="home__table">
+                      <div class="home_table_block">
+                        <div class="home_table_block__icon"> <img class="image" data-src="/assets/img/home_icon_1.svg" alt="" data-lazy=""/>
+                        </div>
+                        <div class="home_table_block__info"> 
+                          <p class="home_table_block__title">Честный подбор</p>
+                          <p class="home_table_block__text">Вы будете знать точную сумму авто ещё до отправки в Россию, никаких сюрпризов и неожиданных переплат</p>
+                        </div>
+                      </div>
+                      <div class="home_table_block">
+                        <div class="home_table_block__icon"> <img class="image" data-src="/assets/img/home_icon_2.svg" alt="" data-lazy=""/>
+                        </div>
+                        <div class="home_table_block__info"> 
+                          <p class="home_table_block__title">Понятная схема работы</p>
+                          <p class="home_table_block__text">Вы будете знать точную сумму авто ещё до отправки в Россию, никаких сюрпризов и неожиданных переплат</p>
+                        </div>
+                      </div>
+                      <div class="home_table_block">
+                        <div class="home_table_block__icon"> <img class="image" data-src="/assets/img/home_icon_3.svg" alt="" data-lazy=""/>
+                        </div>
+                        <div class="home_table_block__info"> 
+                          <p class="home_table_block__title">Отлаженная логистика</p>
+                          <p class="home_table_block__text">Вы будете знать точную сумму авто ещё до отправки в Россию, никаких сюрпризов и неожиданных переплат</p>
+                        </div>
+                      </div>
+            </div>
+          </div>
+        </section>
+        <form class="footer_form" data-form-id="first_screen_form" action="/mailer" data-mailer="">
+          <input type="hidden" name="form" value="Помощь в подборе авто (первый экран, главная страница)">
+          <div class="footer_form__container container">
+            <h3 class="footer_form__title">Поможем подобрать авто</h3>
+            <div class="footer_form__form">
+              <div class="input_wrapper input_wrapper--minimalistic black" data-input-wrapper="">
+                <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+                <label class="input_wrapper__label">Ваше имя</label>
+                <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+              </div>
+              <div class="input_wrapper input_wrapper--minimalistic black" data-input-wrapper="">
+                <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+                <label class="input_wrapper__label">Номер телефона</label>
+                <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+              </div>
+              <button class="footer_form__btn btn btn--black"><span class="btn__text">Отправить</span></button>
+            </div>
+          </div>
+        </form>
+        <section class="section youtube">
+          <div class="youtube__container container"> 
+            <div class="section_block section_block--center">
+              <h2 class="section_block__title">Подпишись на наш YouTube канал</h2>
+              <p class="section_block__text">Снимаем обзоры на авто, которые привозим. Подпишись, смотри и делай выбор</p><a class="section_block__btn btn btn--red btn--icon_right" href="https://www.youtube.com/@MOTORWAY_VL" target="_blank"><span class="btn__text">Перейти на YouTube</span>
+                <svg class="btn__icon btn__icon--white btn__icon--right">
+                  <use xlink:href="#icon_yt"></use>
+                </svg></a>
+            </div><iframe class="youtube__iframe" src="https://www.youtube.com/embed/m2AuvaiS6Yg?si=BJGZqZhuqepV1_wS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="youtube__table"><a class="youtube_block" href="" target="_blank">
+                <div class="youtube_block__wrap"> 
+                  <div class="youtube_block__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/youtube_pic_1.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/youtube_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/youtube_pic_1.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="youtube_block__cover"> 
+                    <div class="youtube_block__btn btn btn--white btn--icon_right" href="https://www.youtube.com/@MOTORWAY_VL" target="_blank"><span class="btn__text">Перейти на YouTube</span>
+                      <svg class="btn__icon btn__icon--black btn__icon--right">
+                        <use xlink:href="#icon_yt"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="youtube_block__text">Обзор машины из Японии</p></a><a class="youtube_block" href="" target="_blank">
+                <div class="youtube_block__wrap"> 
+                  <div class="youtube_block__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/youtube_pic_2.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/youtube_pic_2.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/youtube_pic_2.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="youtube_block__cover"> 
+                    <div class="youtube_block__btn btn btn--white btn--icon_right" href="https://www.youtube.com/@MOTORWAY_VL" target="_blank"><span class="btn__text">Перейти на YouTube</span>
+                      <svg class="btn__icon btn__icon--black btn__icon--right">
+                        <use xlink:href="#icon_yt"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="youtube_block__text">Обзор машины из Китая</p></a><a class="youtube_block" href="" target="_blank">
+                <div class="youtube_block__wrap"> 
+                  <div class="youtube_block__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/youtube_pic_3.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/youtube_pic_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/youtube_pic_3.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="youtube_block__cover"> 
+                    <div class="youtube_block__btn btn btn--white btn--icon_right" href="https://www.youtube.com/@MOTORWAY_VL" target="_blank"><span class="btn__text">Перейти на YouTube</span>
+                      <svg class="btn__icon btn__icon--black btn__icon--right">
+                        <use xlink:href="#icon_yt"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="youtube_block__text">Обзор машины из Кореи</p></a></div>
+          </div>
+        </section>
+        <section class="section countries">
+          <div class="countries__container container"> 
+            <div class="section_block section_block--center">
+              <h2 class="section_block__title">Страны привоза автомобилей</h2>
+              <p class="section_block__text">Из Японии и Кореи доставляем по морю, из Китая — автовозом через сухопутную границу</p>
+            </div>
+            <div class="countries__content">
+              <div class="countries_card">
+                <div class="countries_card__info"> 
+                  <h3 class="countries_card__title">Япония</h3>
+                  <p class="countries_card__text">Аукционные автомобили с честным <br> пробегом и чистой историей</p><a class="countries_card__btn btn btn--filled" href="/japan"><span class="btn__text">Узнать подробнее</span></a>
+                </div>
+                <div class="countries_card__img countries_card__img--japan">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/countries_pic_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/countries_pic_1.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/countries_pic_1.png" alt=""/>
+                  </picture>
+                </div>
+              </div>
+              <div class="countries_card">
+                <div class="countries_card__info"> 
+                  <h3 class="countries_card__title">Корея</h3>
+                  <p class="countries_card__text">Разнообразие корейских и европейских <br class="mobile"> марок <br class="medium"> авто в различных комплектациях</p><a class="countries_card__btn btn btn--filled" href="/korea"><span class="btn__text">Узнать подробнее</span></a>
+                </div>
+                <div class="countries_card__img countries_card__img--korea">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/countries_pic_2.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/countries_pic_2.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/countries_pic_2.png" alt=""/>
+                  </picture>
+                </div>
+              </div>
+              <div class="countries_card">
+                <div class="countries_card__info"> 
+                  <h3 class="countries_card__title">Китай</h3>
+                  <p class="countries_card__text">Разнообразие китайских марок авто <br> в различных комплектациях</p><a class="countries_card__btn btn btn--filled" href="/china"><span class="btn__text">Узнать подробнее</span></a>
+                </div>
+                <div class="countries_card__img countries_card__img--china">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/countries_pic_3.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/countries_pic_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/countries_pic_3.jpg" alt=""/>
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section general_info">
+          <div class="general_info__container container"> 
+            <div class="section_block section_block--center">
+              <h2 class="section_block__title">Вы можете рассчитывать на нас</h2>
+              <p class="section_block__text">Команда MOTORWAY — эксперты в подборе и покупке автомобилей под заказ</p>
+            </div>
+            <div class="general_info__slider slider swiper"> 
+              <div class="swiper-wrapper">
+                        <div class="general_info_slide swiper-slide"> 
+                          <p class="general_info_slide__title">Прозрачная документация</p>
+                          <p class="general_info_slide__text">Вы будете знать точную сумму авто ещё <br class="medium"> до отправки в Россию, никаких сюрпризов <br class="medium"> и неожиданных переплат.</p>
+                          <div class="general_info_slide__img"> 
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_1.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_1.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic_1.png" alt=""/>
+                            </picture>
+                          </div>
+                        </div>
+                        <div class="general_info_slide swiper-slide"> 
+                          <p class="general_info_slide__title">Итоговая цена ниже рынка</p>
+                          <p class="general_info_slide__text">Мы не зашиваем агентские в стоимость автомобиля. Вы отдельно платите за нашу работу, и чистыми — за сам автомобиль.</p>
+                          <div class="general_info_slide__img"> 
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_2.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_2.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic_2.png" alt=""/>
+                            </picture>
+                          </div>
+                        </div>
+                        <div class="general_info_slide swiper-slide"> 
+                          <p class="general_info_slide__title">Внимание к клиентам</p>
+                          <p class="general_info_slide__text">Обрабатываем заявки в режиме реального времени. Отвечаем на любые вопросы, оперативно выходим на связь на всех этапах.</p>
+                          <div class="general_info_slide__img"> 
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_3.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_3.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic_3.png" alt=""/>
+                            </picture>
+                          </div>
+                        </div>
+                        <div class="general_info_slide swiper-slide"> 
+                          <p class="general_info_slide__title">100% гарантия по договору</p>
+                          <p class="general_info_slide__text">Вы можете быть спокойны, вам придёт <br class="medium"> та машина, которую заказали и отправили — <br class="medium"> в целостности и сохранности</p>
+                          <div class="general_info_slide__img"> 
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_4.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_4.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic_4.png" alt=""/>
+                            </picture>
+                          </div>
+                        </div>
+                        <div class="general_info_slide swiper-slide"> 
+                          <p class="general_info_slide__title">Независимая экспертиза</p>
+                          <p class="general_info_slide__text">Перед покупкой из Кореи и Китая проверяем авто на уровне закона. По Японии гарантируем полное совпадение с аукционным листом.</p>
+                          <div class="general_info_slide__img"> 
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_5.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_5.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic_5.png" alt=""/>
+                            </picture>
+                          </div>
+                        </div>
+                        <div class="general_info_slide swiper-slide"> 
+                          <p class="general_info_slide__title">Доступ к запчастям</p>
+                          <p class="general_info_slide__text">Помимо авто поможем найти и привезти автозапчасть и расходники на любой автомобиль</p>
+                          <div class="general_info_slide__img"> 
+                            <picture class="image">
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_6.webp" type="image/webp"/>
+                              <source data-lazy="data-lazy" data-srcset="/assets/img/gen_info_pic_6.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/gen_info_pic_6.png" alt=""/>
+                            </picture>
+                          </div>
+                        </div>
+              </div>
+              <div class="slider__nav general_info__nav">
+                <div class="slider__buttons general_info__nav_buttons">
+                  <button class="slider__button slider__button--prev general_info__slider_btn--prev">
+                    <svg>
+                      <use xlink:href="#arrow_slider"></use>
+                    </svg>
+                  </button>
+                  <button class="slider__button slider__button--next general_info__slider_btn--next">
+                    <svg>
+                      <use xlink:href="#arrow_slider"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section bosses">
+          <div class="bosses__container container"> 
+            <div class="bosses__content"> 
+              <div class="bosses__info">
+                <h2 class="bosses__title">Экспертность, порядочность <br> и надежность. Нам доверяют.</h2>
+                <p class="bosses__text">Нашей команде очень важен результат и отзыв клиента. Если мы понимаем, что заказчик доволен, значит, мы встретимся снова.</p>
+                <p class="bosses__text">Мы никогда не бросаем своих клиентов, решаем нестандартные задачи, работаем на перспективу. Можете прочитать отзывы, чтобы убедиться в этом. </p>
+                <p class="bosses__text bosses__text--dark">Дальше — выбор за вами.</p>
+                <div class="bosses__bottom"> 
+                  <p class="bosses__text bosses__text--small">Читать отзывы</p>
+                  <div class="bosses__icons"> <a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_yandex.svg" alt="" data-lazy=""/></a><a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_2gis.svg" alt="" data-lazy=""/></a><a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_google.svg" alt="" data-lazy=""/></a><a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_vl.svg" alt="" data-lazy=""/></a></div>
+                </div>
+              </div>
+              <div class="bosses__pic bosses__pic--left"> 
+                <picture class="image">
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/oleg.webp" type="image/webp"/>
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/oleg.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/oleg.png" alt=""/>
+                </picture>
+              </div>
+              <div class="bosses__pic bosses__pic--right"> 
+                <picture class="image">
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/sergey.webp" type="image/webp"/>
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/sergey.png" type="image/png"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/sergey.png" alt=""/>
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section reviews">
+          <div class="reviews__container container"> 
+            <div class="section_block section_block--center">
+              <h2 class="section_block__title">Клиенты о нас</h2>
+            </div>
+            <div class="reviews__slider slider swiper"> 
+              <div class="swiper-wrapper">
+                <div class="reviews_slide swiper-slide"> 
+                  <div class="reviews_slide__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_1.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/reviews_pic_1.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="reviews_slide__info"> 
+                    <div class="reviews_slide__top"> 
+                      <p class="reviews_slide__title">Для Александры</p>
+                      <div class="reviews_slide__stars"> <img class="image" data-src="/assets/img/stars.svg" alt="" data-lazy=""/>
+                      </div>
+                      <p class="reviews_slide__text">Привезли HONDA HR-V</p>
+                      <p class="reviews_slide__text reviews_slide__text--date">14.10.2023</p>
+                    </div>
+                    <p class="reviews_slide__text reviews_slide__text--main">Искала машину, выбор стоял между японской и китайской. Хотела приобрести что нибудь в пределах 1,8 млн. Менеджер Олег сделал подборку из десятков авто, среди которых я остановила свой взор на японскую. Хочу выразить огромную благодарность за помощь в покупке отличного автомобиля и быстрые сроки...</p><a class="reviews_slide__text reviews_slide__text--link" href="" target="_blank">Читать полностью на Авито</a>
+                  </div>
+                </div>
+                <div class="reviews_slide swiper-slide"> 
+                  <div class="reviews_slide__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_2.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_2.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/reviews_pic_2.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="reviews_slide__info"> 
+                    <div class="reviews_slide__top"> 
+                      <p class="reviews_slide__title">Для Яны</p>
+                      <div class="reviews_slide__stars"> <img class="image" data-src="/assets/img/stars.svg" alt="" data-lazy=""/>
+                      </div>
+                      <p class="reviews_slide__text">Привезли SUBARU XV</p>
+                      <p class="reviews_slide__text reviews_slide__text--date">14.10.2023</p>
+                    </div>
+                    <p class="reviews_slide__text reviews_slide__text--main">Интересовалась покупкой машины под заказ, очень переживала отдавать деньги за то, чего не вижу. Но набравшись смелости, решилась заказать у компании motorway. Нужна была неприхотливая, не дорогая, проходимая машина, менеджер Олег предложил мне несколько вариантов, я выбрала Субару. Купили быстро...</p><a class="reviews_slide__text reviews_slide__text--link" href="" target="_blank">Читать полностью на Авито</a>
+                  </div>
+                </div>
+                <div class="reviews_slide swiper-slide"> 
+                  <div class="reviews_slide__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_3.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/reviews_pic_3.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="reviews_slide__info"> 
+                    <div class="reviews_slide__top"> 
+                      <p class="reviews_slide__title">Для Ивана</p>
+                      <div class="reviews_slide__stars"> <img class="image" data-src="/assets/img/stars.svg" alt="" data-lazy=""/>
+                      </div>
+                      <p class="reviews_slide__text">Привезли Mercedes-Benz E-class</p>
+                      <p class="reviews_slide__text reviews_slide__text--date">31.08.2023</p>
+                    </div>
+                    <p class="reviews_slide__text reviews_slide__text--main">Рекомендую! Все прошло быстро, в срок, всегда на связи, на любые вопросы отвечает в любое время.</p>
+                  </div>
+                </div>
+                <div class="reviews_slide swiper-slide"> 
+                  <div class="reviews_slide__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_1.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/reviews_pic_1.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="reviews_slide__info"> 
+                    <div class="reviews_slide__top"> 
+                      <p class="reviews_slide__title">Для Александры</p>
+                      <div class="reviews_slide__stars"> <img class="image" data-src="/assets/img/stars.svg" alt="" data-lazy=""/>
+                      </div>
+                      <p class="reviews_slide__text">Привезли HONDA HR-V</p>
+                      <p class="reviews_slide__text reviews_slide__text--date">14.10.2023</p>
+                    </div>
+                    <p class="reviews_slide__text reviews_slide__text--main">Искала машину, выбор стоял между японской и китайской. Хотела приобрести что нибудь в пределах 1,8 млн. Менеджер Олег сделал подборку из десятков авто, среди которых я остановила свой взор на японскую. Хочу выразить огромную благодарность за помощь в покупке отличного автомобиля и быстрые сроки...</p><a class="reviews_slide__text reviews_slide__text--link" href="" target="_blank">Читать полностью на Авито</a>
+                  </div>
+                </div>
+                <div class="reviews_slide swiper-slide"> 
+                  <div class="reviews_slide__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_2.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_2.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/reviews_pic_2.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="reviews_slide__info"> 
+                    <div class="reviews_slide__top"> 
+                      <p class="reviews_slide__title">Для Яны</p>
+                      <div class="reviews_slide__stars"> <img class="image" data-src="/assets/img/stars.svg" alt="" data-lazy=""/>
+                      </div>
+                      <p class="reviews_slide__text">Привезли SUBARU XV</p>
+                      <p class="reviews_slide__text reviews_slide__text--date">14.10.2023</p>
+                    </div>
+                    <p class="reviews_slide__text reviews_slide__text--main">Интересовалась покупкой машины под заказ, очень переживала отдавать деньги за то, чего не вижу. Но набравшись смелости, решилась заказать у компании motorway. Нужна была неприхотливая, не дорогая, проходимая машина, менеджер Олег предложил мне несколько вариантов, я выбрала Субару. Купили быстро...</p><a class="reviews_slide__text reviews_slide__text--link" href="" target="_blank">Читать полностью на Авито</a>
+                  </div>
+                </div>
+                <div class="reviews_slide swiper-slide"> 
+                  <div class="reviews_slide__img"> 
+                    <picture class="image">
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_3.webp" type="image/webp"/>
+                      <source data-lazy="data-lazy" data-srcset="/assets/img/reviews_pic_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/reviews_pic_3.jpg" alt=""/>
+                    </picture>
+                  </div>
+                  <div class="reviews_slide__info"> 
+                    <div class="reviews_slide__top"> 
+                      <p class="reviews_slide__title">Для Ивана</p>
+                      <div class="reviews_slide__stars"> <img class="image" data-src="/assets/img/stars.svg" alt="" data-lazy=""/>
+                      </div>
+                      <p class="reviews_slide__text">Привезли Mercedes-Benz E-class</p>
+                      <p class="reviews_slide__text reviews_slide__text--date">31.08.2023</p>
+                    </div>
+                    <p class="reviews_slide__text reviews_slide__text--main">Рекомендую! Все прошло быстро, в срок, всегда на связи, на любые вопросы отвечает в любое время.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__nav reviews__nav">
+                <div class="slider__buttons reviews__nav_buttons">
+                  <button class="slider__button slider__button--prev reviews__slider_btn--prev">
+                    <svg>
+                      <use xlink:href="#arrow_slider"></use>
+                    </svg>
+                  </button>
+                  <button class="slider__button slider__button--next reviews__slider_btn--next">
+                    <svg>
+                      <use xlink:href="#arrow_slider"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <form class="footer_form" data-form-id="footer_form" action="/mailer" data-mailer="">
           <input type="hidden" name="form" value="Помощь в подборе авто (подвал сайта)">

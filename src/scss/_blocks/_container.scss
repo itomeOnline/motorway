@@ -3,7 +3,7 @@
 	flex-direction: column;
 
 	width: 100vw;
-	max-width: em(1760);
+	max-width: em(1860);
 	min-width: em(1250);
 
 	padding: 0 2.5rem;
@@ -20,7 +20,11 @@
 		min-width: 100%;
 		max-width: 100%;
 
-		padding-left: 1.25rem;
-		padding-right: 1.25rem;
+		padding-left: 1.25rem !important;
+		padding-right: 1.25rem !important;
+	}
+
+	&--first {
+		padding-top: em(180);
 	}
 }

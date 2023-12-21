@@ -1,0 +1,92 @@
+.home {
+	height: 100vh;
+    min-height: em(774);
+    background: $c-black;
+    
+    position: relative;
+    overflow: hidden;
+
+    @media(max-width: 1260px) {
+        min-height: em(952);
+    }
+
+    @media(max-width: 500px) {
+        min-height: em(760);
+    }
+
+    &__container {
+        justify-content: space-between;
+
+        height: 100%;
+        padding: em(188) 0 em(40);
+
+        position: relative;
+        z-index: 2;
+
+        @media(max-width: 1260px) {
+            padding: em(132) 0 em(40);
+        }
+
+        @media(max-width: 500px) {
+            padding: em(100) 0 em(28);
+        }
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 1;
+
+        &--main {
+            width: 55vw;
+            height: 60vh;
+
+            bottom: em(126);
+            right: em(-126);
+
+            @media(max-width: 1260px) {
+                bottom: em(136);
+                right: em(-156);
+
+                width: 90vw;
+                height: 86vh;
+            }
+
+            @media(max-width: 500px) {
+                width: em(524);
+                height: em(294);
+
+                bottom: em(130);
+                right: em(-86);
+            }
+        }
+    }
+
+    &__table {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: em(28);
+
+        @media(max-width: 1260px) {
+            grid-template-columns: repeat(3, em(380));
+            gap: em(20);
+
+            overflow: scroll;
+
+            scrollbar-width: none;
+            -webkit-scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+            	height: 0px;
+            	width: 0px;
+            	background: transparent;
+            }
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: repeat(3, em(280));
+            gap: em(16);
+        }
+    }
+}

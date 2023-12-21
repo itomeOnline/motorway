@@ -1,0 +1,99 @@
+section.section.reviews
+	.reviews__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title Клиенты о нас
+
+		.reviews__slider.slider.swiper 
+			.swiper-wrapper
+				
+				.reviews_slide.swiper-slide 
+					.reviews_slide__img 
+						+img(`${assetsPath}/img/reviews_pic_1.jpg`, '', 'image')
+					.reviews_slide__info 
+						.reviews_slide__top 
+							p.reviews_slide__title Для Александры
+							.reviews_slide__stars 
+								+imgSvg(`${assetsPath}/img/stars.svg`, '', 'image')
+							p.reviews_slide__text Привезли HONDA HR-V
+							p.reviews_slide__text.reviews_slide__text--date 14.10.2023
+						
+						p.reviews_slide__text.reviews_slide__text--main Искала машину, выбор стоял между японской и китайской. Хотела приобрести что нибудь в пределах 1,8 млн. Менеджер Олег сделал подборку из десятков авто, среди которых я остановила свой взор на японскую. Хочу выразить огромную благодарность за помощь в покупке отличного автомобиля и быстрые сроки...
+						a.reviews_slide__text.reviews_slide__text--link(href="", target="_blank") Читать полностью на Авито
+				
+				.reviews_slide.swiper-slide 
+					.reviews_slide__img 
+						+img(`${assetsPath}/img/reviews_pic_2.jpg`, '', 'image')
+					.reviews_slide__info 
+						.reviews_slide__top 
+							p.reviews_slide__title Для Яны
+							.reviews_slide__stars 
+								+imgSvg(`${assetsPath}/img/stars.svg`, '', 'image')
+							p.reviews_slide__text Привезли SUBARU XV
+							p.reviews_slide__text.reviews_slide__text--date 14.10.2023
+						
+						p.reviews_slide__text.reviews_slide__text--main Интересовалась покупкой машины под заказ, очень переживала отдавать деньги за то, чего не вижу. Но набравшись смелости, решилась заказать у компании motorway. Нужна была неприхотливая, не дорогая, проходимая машина, менеджер Олег предложил мне несколько вариантов, я выбрала Субару. Купили быстро...
+						a.reviews_slide__text.reviews_slide__text--link(href="", target="_blank") Читать полностью на Авито
+				
+				.reviews_slide.swiper-slide 
+					.reviews_slide__img 
+						+img(`${assetsPath}/img/reviews_pic_3.jpg`, '', 'image')
+					.reviews_slide__info 
+						.reviews_slide__top 
+							p.reviews_slide__title Для Ивана
+							.reviews_slide__stars 
+								+imgSvg(`${assetsPath}/img/stars.svg`, '', 'image')
+							p.reviews_slide__text Привезли Mercedes-Benz E-class
+							p.reviews_slide__text.reviews_slide__text--date 31.08.2023
+						
+						p.reviews_slide__text.reviews_slide__text--main Рекомендую! Все прошло быстро, в срок, всегда на связи, на любые вопросы отвечает в любое время.
+						
+				
+				.reviews_slide.swiper-slide 
+					.reviews_slide__img 
+						+img(`${assetsPath}/img/reviews_pic_1.jpg`, '', 'image')
+					.reviews_slide__info 
+						.reviews_slide__top 
+							p.reviews_slide__title Для Александры
+							.reviews_slide__stars 
+								+imgSvg(`${assetsPath}/img/stars.svg`, '', 'image')
+							p.reviews_slide__text Привезли HONDA HR-V
+							p.reviews_slide__text.reviews_slide__text--date 14.10.2023
+						
+						p.reviews_slide__text.reviews_slide__text--main Искала машину, выбор стоял между японской и китайской. Хотела приобрести что нибудь в пределах 1,8 млн. Менеджер Олег сделал подборку из десятков авто, среди которых я остановила свой взор на японскую. Хочу выразить огромную благодарность за помощь в покупке отличного автомобиля и быстрые сроки...
+						a.reviews_slide__text.reviews_slide__text--link(href="", target="_blank") Читать полностью на Авито
+				
+				.reviews_slide.swiper-slide 
+					.reviews_slide__img 
+						+img(`${assetsPath}/img/reviews_pic_2.jpg`, '', 'image')
+					.reviews_slide__info 
+						.reviews_slide__top 
+							p.reviews_slide__title Для Яны
+							.reviews_slide__stars 
+								+imgSvg(`${assetsPath}/img/stars.svg`, '', 'image')
+							p.reviews_slide__text Привезли SUBARU XV
+							p.reviews_slide__text.reviews_slide__text--date 14.10.2023
+						
+						p.reviews_slide__text.reviews_slide__text--main Интересовалась покупкой машины под заказ, очень переживала отдавать деньги за то, чего не вижу. Но набравшись смелости, решилась заказать у компании motorway. Нужна была неприхотливая, не дорогая, проходимая машина, менеджер Олег предложил мне несколько вариантов, я выбрала Субару. Купили быстро...
+						a.reviews_slide__text.reviews_slide__text--link(href="", target="_blank") Читать полностью на Авито
+				
+				.reviews_slide.swiper-slide 
+					.reviews_slide__img 
+						+img(`${assetsPath}/img/reviews_pic_3.jpg`, '', 'image')
+					.reviews_slide__info 
+						.reviews_slide__top 
+							p.reviews_slide__title Для Ивана
+							.reviews_slide__stars 
+								+imgSvg(`${assetsPath}/img/stars.svg`, '', 'image')
+							p.reviews_slide__text Привезли Mercedes-Benz E-class
+							p.reviews_slide__text.reviews_slide__text--date 31.08.2023
+						
+						p.reviews_slide__text.reviews_slide__text--main Рекомендую! Все прошло быстро, в срок, всегда на связи, на любые вопросы отвечает в любое время.
+						
+			
+			.slider__nav.reviews__nav
+				.slider__buttons.reviews__nav_buttons
+					button.slider__button.slider__button--prev.reviews__slider_btn--prev
+						+svg('arrow_slider')
+					button.slider__button.slider__button--next.reviews__slider_btn--next
+						+svg('arrow_slider')
