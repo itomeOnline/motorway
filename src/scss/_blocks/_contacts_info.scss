@@ -1,0 +1,126 @@
+.contacts_info {
+	background: #fff;
+    border-radius: 20px;
+
+    padding: em(28);
+
+    width: em(408);
+
+    position: absolute;
+
+    top: em(28);
+    left: em(28);
+    z-index: 2;
+
+    @media(max-width: 1260px) {
+        padding: em(24);
+        width: em(314);
+        border-radius: 16px;
+    }
+
+    @media(max-width: 500px) {
+        position: initial;
+
+        width: 100%;
+
+        margin-bottom: em(20);
+    }
+    
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+
+        & + & {
+            margin-top: em(20);
+        }
+    }
+
+    &__caption {
+        font-size: em(16);
+        line-height: em(22,16);
+        font-weight: 400;
+        color: $c-grey;
+
+        margin-bottom: .5rem;
+
+        @media(max-width: 1260px) {
+            font-size: em(14);
+            line-height: em(18,14);
+        }
+    }
+
+    &__title {
+        font-size: em(24);
+        line-height: em(30,24);
+        font-weight: 600;
+        color: $c-black;
+
+        width: fit-content;
+
+        @media(max-width: 1260px) {
+            font-size: em(20);
+            line-height: em(26,20);
+        }
+
+        &--link {
+            transition: color .2s;
+
+            &:hover {
+                color: $c-primary;
+            }
+        }
+    }
+
+    &__line {
+        display: flex;
+        align-items: center;
+
+        margin-top: .25rem;
+    }
+
+    &__socials_link {
+        width: 36px;
+        height: 36px;
+
+        border-radius: 10px;
+        background: $c-black;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: background .2s;
+
+        @media(max-width: 1260px) {
+            width: 32px;
+            height: 32px;
+        }
+
+        &:hover {
+            background: $c-primary;
+
+            .icon {
+                fill: $c-black;
+            }
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+
+            fill: #fff;
+
+            transition: fill .2s;
+        }
+
+        & + & {
+            margin-left: .5rem;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+
+        margin-top: 1.75rem;
+    }
+}

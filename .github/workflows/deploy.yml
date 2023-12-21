@@ -22,7 +22,7 @@ jobs:
       - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
       # Build
-      - run: npm install
-      - run: npm run build
-      # Deploy
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . root@82.146.51.205:/var/www/user4114/data/www/ost-auto.itome.site/
+      # - run: npm install
+      # - run: npm run build
+      # # Deploy
+      # - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . root@82.146.51.205:/var/www/user4114/data/www/ost-auto.itome.site/

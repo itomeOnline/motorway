@@ -11,6 +11,7 @@ import formSubmit from "./components/form";
 import activeLink from "./components/activeLink";
 import genInfoSlider from "./components/sliders/genInfoSlider";
 import reviewsSlider from "./components/sliders/reviewsSlider";
+import contactsMap from "./components/contactsMap";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -34,6 +35,30 @@ document.addEventListener("DOMContentLoaded", _ => {
 
     genInfoSlider();
     reviewsSlider();
+
+    const initMap = () => {
+
+        let script = document.createElement('script');
+        let link = document.createElement('link');
+
+        link.rel = "stylesheet";
+        link.href = "https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css";
+        document.head.append(link);
+
+        script.async = true;
+        script.src = "https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js";
+        document.head.append(script);
+
+        script.onload = function () {
+            
+            if (document.querySelector('#contactsMap')) {
+                contactsMap(document.querySelector('#contactsMap'));
+            }
+        }
+        
+    }
+
+    initMap();
 
     let scroll = new LocomotiveScroll({ 
         getDirection: true,

@@ -26,5 +26,13 @@
 
 	&--first {
 		padding-top: em(180);
+
+		@media(max-width: 1260px) {
+			padding-top: em(124);
+		}
+
+		@media(max-width: 500px) {
+			padding-top: em(92);
+		}
 	}
 }

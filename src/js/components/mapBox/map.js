@@ -14,7 +14,7 @@ export default class Map {
 
         this.createMap();
         this.bindEventListeners();
-        this.createList();
+        // this.createList();
     }
 
     bindEventListeners() {

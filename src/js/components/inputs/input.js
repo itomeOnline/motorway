@@ -1,4 +1,4 @@
-import { validationMessages } from './validationMessages';
+import validationMessages from './validationMessages';
 
 
 

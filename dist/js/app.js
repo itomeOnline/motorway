@@ -3933,7 +3933,7 @@
 
   }
 
-  let validationMessages = {
+  const validationMessages = {
 
   	valueMissing: {
   	 default: 'Заполните поле',
@@ -20227,6 +20227,218 @@
       });
   }
 
+  class MarkerElement {
+
+      constructor(markerData, map) {
+          this.map = map;
+          this.markerData = markerData;
+          this.marker = null;
+          
+          this.render();
+          this.bindEventListeners();
+      }
+
+      bindEventListeners() {
+          let map = this.map;
+          let markerData = this.markerData;
+          let marker = this.marker;
+
+
+          this.marker.addEventListener('click', () =>  {
+
+              let listEl = document.querySelector(`[data-list-id="${markerData.properties.id}"]`);
+              let listElems = document.querySelectorAll(`[data-list-id]`);
+              let activeListEl = [].find.call(listElems, el => el.classList.contains('is-active'));
+
+              if (activeListEl) {
+                  activeListEl.classList.remove('is-active');
+              }
+
+              listEl.classList.add('is-active');
+
+              listEl.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center'
+              });
+              
+
+              map.easeTo({
+                  center: markerData.geometry.coordinates,
+                  bearing: 180,
+                  pitch: 70,
+                  zoom: 12,
+                  duration: 1500
+              });
+
+          });
+      }
+      
+      render() {
+          this.marker = document.createElement('button');
+          this.marker.classList.add('marker');
+          this.marker.setAttribute('data-map-link', `${this.markerData.properties.id}`);
+          this.marker.innerHTML = `<div data-map-tooltip="">${this.markerData.properties.text}</div>`;
+          this.marker.style.backgroundImage = 'url("/assets/img/marker.svg")';
+      }
+
+  }
+
+  class MapListElement {
+
+      constructor(markerData, map) {
+          this.markerData = markerData;
+          this.map = map;
+          this.listEl = null;
+
+          this.createListElement();
+          this.bindEventListeners();
+      }
+
+      bindEventListeners() {
+          let map = this.map;
+          let markerData = this.markerData;
+
+          this.listEl.addEventListener('click', () =>  {
+
+              let listElems = document.querySelectorAll(`[data-list-id]`);
+              let activeListEl = [].find.call(listElems, el => el.classList.contains('is-active'));
+
+              if (activeListEl) {
+                  activeListEl.classList.remove('is-active');
+              }
+              
+              this.listEl.classList.add('is-active');
+
+              map.easeTo({
+                  center: markerData.geometry.coordinates,
+                  bearing: 180,
+                  pitch: 70,
+                  zoom: 12,
+                  duration: 1500
+              });
+          });
+      }
+
+      createListElement() {
+          this.listEl = document.createElement('button');
+          this.listEl.classList.add('map_list_element');
+          this.listEl.setAttribute('data-list-id', `${this.markerData.properties.id}`);
+          this.listEl.innerHTML = `${this.markerData.properties.text}`;
+      }
+
+  }
+
+  class MapList {
+
+      constructor(markerData, map) {
+          this.markerData = markerData;
+          this.map = map;
+          this.button = null;
+          this.mapList = document.querySelector('[data-map-list] .simplebar-content');
+
+          this.createList();
+      }
+
+      createList() {
+          this.button = new MapListElement(this.markerData, this.map).listEl;
+          this.mapList.appendChild(this.button);
+      }
+  }
+
+  class Map$1 {
+      constructor({container, markers, token, style, zoom, mapCenter}) {
+          this.container = container;
+          this.markers = markers;
+          this.map = null;
+          this.token = token;
+          this.style = style;
+          this.mapCenter = mapCenter;
+          this.zoom = zoom;
+          this.markerList = {};
+
+          this.createMap();
+          this.bindEventListeners();
+          // this.createList();
+      }
+
+      bindEventListeners() {
+         
+
+          let {markers, map} = this;
+          
+          this.map.on('load', () => {
+              
+              markers.features.forEach(markerData => {
+                  new mapboxgl.Marker(new MarkerElement(markerData, map).marker, {offset: [0, -46]})
+                  .setLngLat(markerData.geometry.coordinates)
+                  .addTo(map);
+              });
+
+              map.addSource('markers', {
+                  type: 'geojson',
+                  data: markers,
+              });
+
+              map.getSource('markers').setData(markers);
+          });
+      }
+
+      createMap() {
+          mapboxgl.accessToken = this.token;
+          this.map = new mapboxgl.Map({
+              container: this.container,
+              style: this.style,
+              center: this.mapCenter,
+              zoom: this.zoom,
+          });
+          
+          this.map.scrollZoom.disable();
+          this.map.addControl(new mapboxgl.NavigationControl());
+      }
+
+      createList() {
+          this.markers.features.forEach(markerData => {
+              new MapList(markerData, this.map);
+          });
+      }
+      
+  }
+
+  const markers = {
+      "type": "FeatureCollection",
+  	"features": [
+  	    {
+              "type": "Feature",
+              "properties": {
+                  id: 1,
+                  text: '',
+              },
+              "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                      131.958967, 43.121333
+                  ]
+              }
+          },
+      ]
+  };
+
+  function contactsMap (el) {
+      
+      const mapToken = 'pk.eyJ1Ijoic2VyZWdhdG8iLCJhIjoiTVhMa2NkRSJ9.LyqhckvDNmXgLSdHiRKigw';
+      const mapStyle = 'mapbox://styles/seregato/clqexs3ur00gl01qugncof93f';
+
+      const mapbox = new Map$1({
+          container: el,
+          markers: markers,
+          token: mapToken,
+          style: mapStyle,
+          zoom: 15,
+          mapCenter: [131.958967, 43.121333],
+      });
+   
+  }
+
   setTimeout(() => { 
       document.querySelector('body').classList.add('on-loaded');
   }, 1000);
@@ -20249,6 +20461,30 @@
 
       genInfoSlider();
       reviewsSlider();
+
+      const initMap = () => {
+
+          let script = document.createElement('script');
+          let link = document.createElement('link');
+
+          link.rel = "stylesheet";
+          link.href = "https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css";
+          document.head.append(link);
+
+          script.async = true;
+          script.src = "https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js";
+          document.head.append(script);
+
+          script.onload = function () {
+              
+              if (document.querySelector('#contactsMap')) {
+                  contactsMap(document.querySelector('#contactsMap'));
+              }
+          };
+          
+      };
+
+      initMap();
 
       let scroll = new Smooth({ 
           getDirection: true,

@@ -1,4 +1,4 @@
-let validationMessages = {
+const validationMessages = {
 
 	valueMissing: {
 	 default: 'Заполните поле',

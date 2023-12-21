@@ -1,0 +1,50 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Контакты — MOTORWAY';
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.contacts
+			.contacts__container.container.container--first 
+				
+				.section_block.section_block--center
+
+					h1.section_block__title Мы всегда на связи
+
+				.contacts__content
+					a.contacts__route_btn.btn.btn--white.btn--icon_left(href="https://yandex.ru/maps/-/CDqkqV1Q", target="_blank")
+						+svg("route", "btn__icon btn__icon--black btn__icon--left")
+						span.btn__text Построить маршрут
+
+					.contacts_info
+						.contacts_info__wrap
+							p.contacts_info__caption Телефон
+							a.contacts_info__title.contacts_info__title--link(href="tel:+7 (908) 450-10-05") +7 (908) 450-10-05
+						.contacts_info__wrap
+							p.contacts_info__caption Электронная почта
+							a.contacts_info__title.contacts_info__title--link(href="mailto:motorway-vl@gmail.com") motorway-vl@gmail.com
+						.contacts_info__wrap
+							p.contacts_info__caption Адрес
+							a.contacts_info__title.contacts_info__title--link(href="", target="_blank") Владивосток, Нейбута, 87
+						.contacts_info__wrap
+							p.contacts_info__caption Режим работы
+							a.contacts_info__title Пн-Пт, 9:00-18:00
+						
+						.contacts_info__wrap
+							p.contacts_info__caption Социальные сети
+							.contacts_info__line 
+								a.contacts_info__socials_link(href="", target="_blank")
+									+svg('icon_tg', 'icon')
+								a.contacts_info__socials_link(href="", target="_blank")
+									+svg('icon_vk', 'icon')
+								a.contacts_info__socials_link(href="", target="_blank")
+									+svg('icon_inst', 'icon')
+								a.contacts_info__socials_link(href="", target="_blank")
+									+svg('icon_yt', 'icon')
+
+						button.contacts_info__btn.btn.btn--filled(data-linked-modal="modal_ask") Задать вопрос
+
+					#contactsMap.contacts__map
