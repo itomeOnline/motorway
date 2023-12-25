@@ -20791,12 +20791,12 @@
 
 
       const hideElem = el => {
-          el.addEventListener('transitionend', ({target}) => {
-              return new Promise((res, rej) => {
+          el.classList.remove('is-active');
+          
+          return new Promise((res, rej) => {
+              el.addEventListener('transitionend', ({target}) => {
                   if (target.isSameNode(el)) res();
-                  el.classList.remove('is-active');
-                  
-              })
+              });
           });
           
       };
