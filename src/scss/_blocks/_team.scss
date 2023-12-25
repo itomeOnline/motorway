@@ -1,0 +1,22 @@
+.team {
+
+	&__slider {
+        margin-top: em(52);
+
+        @media(max-width: 1260px) {
+			margin-top: em(40);
+		}
+
+		@media(max-width: 500px) {
+			margin-top: em(32);
+		}
+    }
+
+    &__nav {
+        display: none;
+
+        @media(max-width: 1260px) {
+            display: flex;
+        }
+    }	
+}

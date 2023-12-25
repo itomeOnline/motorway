@@ -12,6 +12,11 @@ import activeLink from "./components/activeLink";
 import genInfoSlider from "./components/sliders/genInfoSlider";
 import reviewsSlider from "./components/sliders/reviewsSlider";
 import contactsMap from "./components/contactsMap";
+import faqDropdown from "./components/faqDropdown";
+import teamSlider from "./components/sliders/teamSlider";
+import homeInfiniteSlider from "./components/sliders/homeInfiniteSlider";
+import carsCatalog from "./components/carsCatalog";
+import advanSlider from "./components/sliders/advanSlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -32,9 +37,27 @@ document.addEventListener("DOMContentLoaded", _ => {
     formSubmit();
     ModalDispatcher.init();
     activeLink();
+    faqDropdown();
 
     genInfoSlider();
     reviewsSlider();
+    teamSlider();
+    homeInfiniteSlider();
+    advanSlider();
+
+    if (document.querySelector('.best_offers--japan')) {
+
+        (async _ => {
+            const res = await fetch('/js/catalogsData/japanData.json');
+            const cars = await res.json();
+            carsCatalog.init(cars);
+        })();
+    }
+
+    
+
+
+    
 
     const initMap = () => {
 

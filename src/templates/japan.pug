@@ -1,0 +1,13 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Автомобили с аукционов Японии  — MOTORWAY';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		include _partials/_pages/_japan_page/home
+		include _partials/_pages/_japan_page/best_offers
+		include _partials/_pages/_japan_page/advantages

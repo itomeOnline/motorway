@@ -22,6 +22,7 @@ $height: 3.5em;
 
 	&.disabled {
 		opacity: .4;
+		pointer-events: none;
 	}
 
 	@media(max-width: 1260px) {

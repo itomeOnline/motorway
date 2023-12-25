@@ -1,0 +1,29 @@
+mixin genInfoCard(img, title, text)
+	.general_info_slide.swiper-slide 
+		p.general_info_slide__title= title
+		p.general_info_slide__text!= text
+		.general_info_slide__img 
+			+img(img, '', 'image')
+
+section.section.general_info
+	.general_info__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title При покупке авто через нас вы получаете
+			p.section_block__text отличный автомобиль в короткий срок и по выгодной цене
+
+		.general_info__slider.slider.swiper 
+			.swiper-wrapper
+				+genInfoCard(`${assetsPath}/img/gen_info_pic_1.png`, 'Прозрачная документация', 'Вы будете знать точную сумму авто ещё <br class="medium"> до отправки в Россию, никаких сюрпризов <br class="medium"> и неожиданных переплат.')
+				+genInfoCard(`${assetsPath}/img/gen_info_pic_2.png`, 'Итоговая цена ниже рынка', 'Мы не зашиваем агентские в стоимость автомобиля. Вы отдельно платите за нашу работу, и чистыми — за сам автомобиль.')
+				+genInfoCard(`${assetsPath}/img/gen_info_pic_3.png`, 'Внимание к клиентам', 'Обрабатываем заявки в режиме реального времени. Отвечаем на любые вопросы, оперативно выходим на связь на всех этапах.')
+				+genInfoCard(`${assetsPath}/img/gen_info_pic_4.png`, '100% гарантия по договору', 'Вы можете быть спокойны, вам придёт <br class="medium"> та машина, которую заказали и отправили — <br class="medium"> в целостности и сохранности')  
+				+genInfoCard(`${assetsPath}/img/gen_info_pic_5.png`, 'Независимая экспертиза', 'Перед покупкой из Кореи и Китая проверяем авто на уровне закона. По Японии гарантируем полное совпадение с аукционным листом.')
+				+genInfoCard(`${assetsPath}/img/gen_info_pic_6.png`, 'Доступ к запчастям', 'Помимо авто поможем найти и привезти автозапчасть и расходники на любой автомобиль')
+			
+			.slider__nav.general_info__nav
+				.slider__buttons.general_info__nav_buttons
+					button.slider__button.slider__button--prev.general_info__slider_btn--prev
+						+svg('arrow_slider')
+					button.slider__button.slider__button--next.general_info__slider_btn--next
+						+svg('arrow_slider')

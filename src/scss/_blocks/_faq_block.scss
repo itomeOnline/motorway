@@ -1,0 +1,115 @@
+.faq_block {
+    width: 100%;
+
+    padding: em(28);
+
+    display: flex;
+    flex-direction: column;
+
+
+    @media(max-width: 1260px) {
+        padding: em(24);
+    }
+
+    @media(max-width: 500px) {
+        padding: em(20);
+    }
+
+    &.is-open {
+
+        .faq_block__content {
+            margin-top: em(16);
+
+            max-height: 40em;
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .rotate {
+            transform: rotate(90deg) translateY(-100%);
+        }
+    }
+
+    &__btn {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        text-align: left;
+    }
+
+    &__title {
+        font-size: em(24);
+        line-height: em(30,24);
+        font-weight: 700;
+        color: $c-black;
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        @media(max-width: 1260px) {
+            font-size: em(20);
+            line-height: em(26,20);
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(16);
+            line-height: em(20,16);
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+
+        margin-left: em(28);
+
+        flex: none;
+
+        @media(max-width: 1260px) {
+            width: 16px;
+            height: 16px;
+        }
+
+        .rotate {
+            transition: transform .2s;
+        }
+    }
+
+    &__content {
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        width: 100%;
+
+        transition: margin .2s, max-height .2s, opacity .2s;
+    }
+
+    &__text {
+        font-size: em(18);
+        line-height: em(24,18);
+        font-weight: 400;
+        color: $c-grey;
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        max-width: 75%;
+
+        @media(max-width: 1260px) {
+            font-size: em(16);
+            line-height: em(22,16);
+
+            max-width: 90%;
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(14);
+            line-height: 1.25rem;
+        }
+    }
+
+    & + & {
+        border-top: 1px solid #E8E8EA;;
+    }
+}

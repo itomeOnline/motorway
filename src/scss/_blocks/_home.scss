@@ -14,27 +14,62 @@
         min-height: em(760);
     }
 
+    &--about {
+        background: #000;
+
+        @media(max-width: 500px) {
+            min-height: em(850);
+        }
+    }
+
     &__container {
         justify-content: space-between;
 
         height: 100%;
-        padding: em(188) 0 em(40);
+        padding-top: em(188);
+        padding-bottom: em(40);
 
         position: relative;
         z-index: 2;
 
         @media(max-width: 1260px) {
-            padding: em(132) 0 em(40);
+            padding-top: em(132);
+            padding-bottom: em(40);
         }
 
         @media(max-width: 500px) {
-            padding: em(100) 0 em(28);
+            padding-top: em(100);
+            padding-bottom: em(28);
         }
     }
 
     &__img {
         position: absolute;
         z-index: 1;
+
+        &--japan {
+            width: 100vw;
+            height: 90vh;
+
+            bottom: em(80);
+            right: em(-500);
+
+            @media(max-width: 1260px) {
+                bottom: em(156);
+                right: em(-300);
+
+                width: em(1096);
+                height: em(618);
+            }
+
+            @media(max-width: 500px) {
+                width: em(522);
+                height: em(294);
+
+                bottom: em(150);
+                right: em(-124);
+            }
+        }
 
         &--main {
             width: 55vw;
@@ -57,6 +92,31 @@
 
                 bottom: em(130);
                 right: em(-86);
+            }
+        }
+
+        &--about {
+            width: 105vw;
+            height: 110vh;
+
+            bottom: -2px;
+            right: em(-60);
+
+            @media(max-width: 1260px) {
+                width: 150vw;
+                min-height: em(800);
+                height: 80vh;
+                bottom: -2px;
+                right: em(-60);
+            }
+
+            @media(max-width: 500px) {
+                width: em(896);
+                height: em(500);
+                min-height: fit-content;
+
+                bottom: em(140);
+                right: em(-128);
             }
         }
     }
@@ -87,6 +147,15 @@
         @media(max-width: 500px) {
             grid-template-columns: repeat(3, em(280));
             gap: em(16);
+        }
+
+        &--about {
+
+            @media(max-width: 500px) {
+                grid-template-columns: 100%;
+                gap: em(12);
+                overflow: auto;
+            }
         }
     }
 }

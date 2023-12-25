@@ -26,7 +26,8 @@
 
         &.grid {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 1fr em(90) 1fr;
+            justify-content: initial;
 
             @media(max-width: 500px) {
                 display: flex;
@@ -47,6 +48,7 @@
 
     &__buttons {
         display: flex;
+        justify-content: center;
 
         @media(max-width: 500px) {
             margin-bottom: em(20);

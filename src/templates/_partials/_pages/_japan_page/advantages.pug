@@ -1,0 +1,32 @@
+mixin advanCard(icon, title, text)
+	.advantages_slide.swiper-slide 
+		.advantages_slide__icon 
+			+imgSvg(icon, '', 'image')
+		p.advantages_slide__title= title
+		p.advantages_slide__text!= text
+
+section.section.advantages
+	.advantages__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title При покупке авто из Японии #[br.medium] вы можете рассчитывать на
+
+		.advantages__slider.slider.swiper 
+			.swiper-wrapper
+				+advanCard(`${assetsPath}/img/advan_icon_1.svg`, 'Честную цену', 'Мы не прогнозируем бюджет, а называем точную сумму. Подберём авто в обозначенный вами лимит, без скрытых платежей.')
+				+advanCard(`${assetsPath}/img/advan_icon_2.svg`, 'Безопасность', 'В отличие от покупки с рук в России, покупая авто на аукционах, вы автоматически защищаете себя от обмана.')
+				+advanCard(`${assetsPath}/img/advan_icon_3.svg`, 'Чистую историю', 'Вы будете первым хозяином авто в РФ. И никаких проблем с документами: 100% гарантия, что авто не в угоне, не распил и т.д.')
+				+advanCard(`${assetsPath}/img/advan_icon_4.svg`, 'Огромный выбор', '+1000 новых лотов ежедневно. Просто обозначьте, что больше нравится, и в какую цену надо уложиться.')
+				+advanCard(`${assetsPath}/img/advan_icon_5.svg`, 'Качество сборки', 'Авто из Японии по качеству сборки значительно превосходят авто аналогичных моделей, собранных в Европе и России.')
+				+advanCard(`${assetsPath}/img/advan_icon_6.svg`, 'Надёжность', 'Мы работаем только с проверенными аукционами. До покупки запрашиваем перевод аукционного листа у экспертов.')
+				+advanCard(`${assetsPath}/img/advan_icon_7.svg`, 'Режим эксплуатации', 'Все авто из Японии, даже с большим пробегом, могут быть как с конвейера. В Японии отличные дороги и топливо — авто не изнашивается так, как в России.')
+				+advanCard(`${assetsPath}/img/advan_icon_8.svg`, 'Простота покупки', 'Работа с японскими аукционами уже настолько отлажена, что вообще не возникает никаких вопросов. По крайней мере, у нас.')
+				+advanCard(`${assetsPath}/img/advan_icon_9.svg`, 'Комплекс доп. услуг', 'Нужны автозапчасти или расходники из Японии? Привезём вместе в автомобилем.')
+				
+			
+			.slider__nav.advantages__nav
+				.slider__buttons.advantages__nav_buttons
+					button.slider__button.slider__button--prev.advantages__slider_btn--prev
+						+svg('arrow_slider')
+					button.slider__button.slider__button--next.advantages__slider_btn--next
+						+svg('arrow_slider')

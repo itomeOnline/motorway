@@ -1,0 +1,19 @@
+.faq {
+    
+    &__content {
+        margin-top: em(52);
+
+        border-radius: 20px;
+        border: 1px solid #E8E8EA;
+        background: #FFF;
+
+        @media(max-width: 1260px) {
+			margin-top: em(40);
+		}
+
+		@media(max-width: 500px) {
+			margin-top: em(32);
+
+		}
+    }
+}

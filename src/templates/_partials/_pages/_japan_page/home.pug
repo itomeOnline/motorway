@@ -1,0 +1,57 @@
+section.section.home.home--japan
+	.home__img.home__img--japan
+		+img(`${assetsPath}/img/home_pic_2.png`, '', 'image')
+
+	.home__container.container
+		.section_block
+			h1.section_block__title.section_block__title--white Автомобили #[br] с аукционов #[br.mobile] Японии 
+			p.section_block__text.section_block__text--white Подберём, купим, растаможим и доставим авто в любой город РФ. #[br.medium] Гарантируем полное совпадение с аукционным листом. Вы получите #[br.medium] надёжный проверенный автомобиль: 3-4 недели с момента покупки, #[br.medium] и авто приходит на стоянку во Владивосток.
+
+		
+		.home_resp_block
+			.home_resp_block__pic
+				+img(`${assetsPath}/img/oleg_small.png`, '', 'image')
+			.home_resp_block__pic
+				+img(`${assetsPath}/img/sergey_small.png`, '', 'image')
+
+			p.home_resp_block__text Несем ответственность #[br.mobile] за подбор авто
+
+		.home_infinite_slider.swiper
+			.swiper-wrapper 
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_1.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_2.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_3.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_4.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_5.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_6.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_7.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_8.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/japan_brand_9.svg`, '', 'image')
+
+form.footer_form(data-form-id="calc_auto_japan", action="/mailer", data-mailer="")
+	input(type="hidden", name="form", value="Рассчитать авто из Японии (первый экран, страница Японии)")
+
+	.footer_form__container.container
+		h3.footer_form__title Рассчитать авто из Японии
+
+		.footer_form__form
+			.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+				input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+				label.input_wrapper__label Ваше имя
+				.input_wrapper__tooltip(data-input-tooltip="")
+			.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+				input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+				label.input_wrapper__label Номер телефона
+				.input_wrapper__tooltip(data-input-tooltip="")
+			button.footer_form__btn.btn.btn--black
+				span.btn__text Отправить
+		

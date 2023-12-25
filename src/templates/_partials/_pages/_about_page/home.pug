@@ -1,0 +1,20 @@
+mixin homeTableBlock(icon, title)
+	.home_table_block.home_table_block--about
+		.home_table_block__icon 
+			+imgSvg(icon, '', 'image')
+		.home_table_block__info 
+			p.home_table_block__title.home_table_block__title--about= title
+
+section.section.home.home--about
+	.home__img.home__img--about
+		+img(`${assetsPath}/img/home_pic_5.png`, '', 'image')
+
+	.home__container.container
+		.section_block
+			h1.section_block__title.section_block__title--white Ты узнаешь, #[br] как всё устроено #[br] на самом деле
+			p.section_block__text.section_block__text--white Поможем привезти автомобиль #[br.mobile] по цене ниже #[br.medium] рынка, не скрывая #[br.mobile] агентских платежей.
+
+		.home__table.home__table--about
+			+homeTableBlock(`${assetsPath}/img/home_icon_4.svg`, 'Доставка во все города РФ')
+			+homeTableBlock(`${assetsPath}/img/home_icon_5.svg`, '3 страны привоза')
+			+homeTableBlock(`${assetsPath}/img/home_icon_6.svg`, 'На связи 24/7')
