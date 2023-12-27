@@ -10,7 +10,7 @@ const markers = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    131.958967, 43.121333
+                    131.886448, 43.119550
                 ]
             }
         },

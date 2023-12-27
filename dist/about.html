@@ -35,6 +35,10 @@
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M6.845 4.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 0 1-1.06-1.06l4.72-4.72-4.72-4.72a.75.75 0 0 1 0-1.06z"/>
 		</symbol>
 	
+		<symbol id="close" viewBox="0 0 32 32">
+			<path d="M8.306 22.219a1.043 1.043 0 1 0 1.475 1.475L8.306 22.22zm8.432-5.481a1.043 1.043 0 1 0-1.476-1.476l1.476 1.476zm-1.476-1.476a1.043 1.043 0 1 0 1.476 1.476l-1.476-1.476zm8.432-5.48a1.043 1.043 0 0 0-1.475-1.476l1.475 1.475zm-6.956 5.48a1.043 1.043 0 1 0-1.476 1.476l1.476-1.476zm5.48 8.432a1.043 1.043 0 0 0 1.476-1.475l-1.475 1.475zm-6.956-6.956a1.043 1.043 0 1 0 1.476-1.476l-1.476 1.476zm-5.48-8.432A1.043 1.043 0 1 0 8.305 9.78L9.78 8.306zm0 15.388l6.956-6.956-1.476-1.476-6.956 6.957 1.475 1.475zm6.956-6.956l6.956-6.957-1.475-1.475-6.957 6.956 1.476 1.476zm-1.476 0l6.957 6.956 1.475-1.475-6.956-6.957-1.476 1.476zm1.476-1.476L9.78 8.306 8.306 9.78l6.956 6.957 1.476-1.476z"/>
+		</symbol>
+	
 		<symbol id="icon_inst" viewBox="0 0 16 16">
 			<path d="M10.938 1H5.069C2.519 1 1 2.519 1 5.067v5.859C1 13.481 2.52 15 5.069 15h5.862C13.48 15 15 13.481 15 10.933V5.067C15.007 2.519 13.487 1 10.938 1zm-2.935 9.716A2.72 2.72 0 0 1 5.286 8a2.72 2.72 0 0 1 2.717-2.716A2.72 2.72 0 0 1 10.721 8a2.72 2.72 0 0 1-2.718 2.716zm4.147-6.3a.81.81 0 0 1-.148.231.81.81 0 0 1-.23.147.698.698 0 0 1-.764-.147.809.809 0 0 1-.147-.231.697.697 0 0 1-.056-.266c0-.091.02-.182.056-.266a.723.723 0 0 1 .147-.231.7.7 0 0 1 .763-.147.53.53 0 0 1 .126.063c.035.021.07.056.105.084.063.07.112.14.148.231a.697.697 0 0 1 .056.266.697.697 0 0 1-.056.266z"/>
 		</symbol>
@@ -78,25 +82,59 @@
     </div>
     <div class="modals">
       <div class="modal__overlay" id="commonModalOverlay"></div>
+      <div class="modal_menu modal" data-modal="modal_menu">
+        <button class="modal_menu__close" data-modal-close="">
+          <svg class="icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+        <div class="modal_menu__content" data-simplebar=""> 
+          <div class="modal_menu__block">
+            <p class="modal_menu__title">Меню</p><a class="footer__link footer__link--menu" href="/japan" data-active-link="">Авто из Японии</a><a class="footer__link footer__link--menu" href="/korea" data-active-link="">Авто из Кореи</a><a class="footer__link footer__link--menu" href="/china" data-active-link="">Авто из Китая</a><a class="footer__link footer__link--menu" href="/about" data-active-link="">О компании</a><a class="footer__link footer__link--menu" href="/contacts" data-active-link="">Контакты</a><a class="footer__link footer__link--menu" href="/faq" data-active-link="">FAQ</a>
+          </div>
+          <div class="modal_menu__block">
+            <p class="modal_menu__title">Мы в соцсетях</p><a class="footer__link footer__link--menu" href="https://t.me/motorway_vl" target="_blank">
+              <svg class="icon">
+                <use xlink:href="#icon_tg"></use>
+              </svg> Telegram</a><a class="footer__link footer__link--menu" href="https://wa.me/79242400077" target="_blank">
+              <svg class="icon">
+                <use xlink:href="#icon_wa"></use>
+              </svg> WhatsApp</a><a class="footer__link footer__link--menu" href="https://vk.com/motorwayvl" target="_blank">
+              <svg class="icon">
+                <use xlink:href="#icon_vk"></use>
+              </svg> ВКонтакте</a><a class="footer__link footer__link--menu" href="https://instagram.com/MOTORWAY_VL" target="_blank">
+              <svg class="icon">
+                <use xlink:href="#icon_inst"></use>
+              </svg> Instagram</a><a class="footer__link footer__link--menu" href="https://www.youtube.com/@MOTORWAY_VL" target="_blank">
+              <svg class="icon">
+                <use xlink:href="#icon_yt"></use>
+              </svg> YouTube</a>
+          </div>
+          <div class="modal_menu__buttons">
+            <button class="modal_menu__btn btn btn--filled" data-linked-modal="modal_calc_auto"><span class="btn__text">Рассчитать авто</span></button><a class="modal_menu__btn btn btn--outlined" href="tel:+7 (924) 240-00-77"><span class="btn__text">+7 (924) 240-00-77</span></a>
+          </div>
+        </div>
+        <div class="modal_menu__bottom"> <a class="modal_menu__itome" href="https://itome.online/" target="_blank"><img class="image" data-src="/assets/img/itome_letters.svg" alt="" data-lazy=""/></a></div>
+      </div>
     </div>
     <div class="content">
       <header class="header">
         <div class="header__container container">
           <div class="header__line header__line--top"> <a class="header__logo" href="/"><img class="image" data-src="/assets/img/header_logo.svg" alt="" data-lazy=""/></a>
-            <div class="header__socials"><a class="header__socials_link" href="" target="_blank">
+            <div class="header__socials"><a class="header__socials_link" href="https://instagram.com/MOTORWAY_VL" target="_blank">
                 <svg class="icon">
                   <use xlink:href="#icon_inst"></use>
-                </svg> Instagram</a><a class="header__socials_link" href="" target="_blank">
+                </svg> Instagram</a><a class="header__socials_link" href="https://www.youtube.com/@MOTORWAY_VL" target="_blank">
                 <svg class="icon">
                   <use xlink:href="#icon_yt"></use>
-                </svg> YouTube</a><a class="header__socials_link" href="" target="_blank">
+                </svg> YouTube</a><a class="header__socials_link" href="https://vk.com/motorwayvl" target="_blank">
                 <svg class="icon">
                   <use xlink:href="#icon_vk"></use>
-                </svg> ВКонтакте</a><a class="header__socials_link" href="" target="_blank">
+                </svg> ВКонтакте</a><a class="header__socials_link" href="https://t.me/motorway_vl" target="_blank">
                 <svg class="icon">
                   <use xlink:href="#icon_tg"></use>
                 </svg> Telegram</a></div>
-            <div class="header__buttons"> <a class="header__buttons_phone" href="tel:+7 (908) 450-10-05">+7 (908) 450-10-05</a>
+            <div class="header__buttons"> <a class="header__buttons_phone" href="tel:+7 (924) 240-00-77">+7 (924) 240-00-77</a>
               <button class="header__buttons_modal btn btn--filled btn--small" data-linked-modal="modal_calc_auto"><span class="btn__text">Рассчитать авто</span></button>
               <button class="header__menu" data-linked-modal="modal_menu">
                 <svg class="icon">
@@ -106,10 +144,7 @@
             </div>
           </div>
           <div class="header__line header__line--bottom"> 
-            <nav class="header__nav"><a class="header__socials_link" href="/japan">Авто из Японии</a><a class="header__socials_link" href="/korea">Авто из Кореи</a><a class="header__socials_link" href="/china">Авто из Китая</a><a class="header__socials_link" href="/about">О компании</a><a class="header__socials_link" href="/contacts">Контакты</a><a class="header__socials_link" href="/faq">FAQ</a></nav><a class="header__buttons_phone header__auc_btn" href="/auc" target="_blank">Перейти на аукцион 
-              <svg class="icon">
-                <use xlink:href="#arrow_right"></use>
-              </svg></a>
+            <nav class="header__nav"><a class="header__socials_link" href="/japan">Авто из Японии</a><a class="header__socials_link" href="/korea">Авто из Кореи</a><a class="header__socials_link" href="/china">Авто из Китая</a><a class="header__socials_link" href="/about">О компании</a><a class="header__socials_link" href="/contacts">Контакты</a><a class="header__socials_link" href="/faq">FAQ</a></nav>
           </div>
         </div>
       </header>
@@ -159,10 +194,6 @@
                 <p class="bosses__text">Нашей команде очень важен результат и отзыв клиента. Если мы понимаем, что заказчик доволен, значит, мы встретимся снова.</p>
                 <p class="bosses__text">Мы никогда не бросаем своих клиентов, решаем нестандартные задачи, работаем на перспективу. Можете прочитать отзывы, чтобы убедиться в этом. </p>
                 <p class="bosses__text bosses__text--dark">Дальше — выбор за вами.</p>
-                <div class="bosses__bottom"> 
-                  <p class="bosses__text bosses__text--small">Читать отзывы</p>
-                  <div class="bosses__icons"> <a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_yandex.svg" alt="" data-lazy=""/></a><a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_2gis.svg" alt="" data-lazy=""/></a><a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_google.svg" alt="" data-lazy=""/></a><a class="bosses__icon" href="" target="_blank"><img class="image" data-src="/assets/img/icon_vl.svg" alt="" data-lazy=""/></a></div>
-                </div>
               </div>
               <div class="bosses__pic bosses__pic--left"> 
                 <picture class="image">
@@ -281,7 +312,7 @@
                   </div>
                   <div class="team_slide__info"> 
                     <p class="team_slide__title">Каминский Сергей Иванович</p>
-                    <p class="team_slide__text">Директор</p><a class="team_slide__btn btn btn--black btn--icon_right" href="" target="_blank"><span class="btn__text">Написать в WhatsApp</span>
+                    <p class="team_slide__text">Директор</p><a class="team_slide__btn btn btn--black btn--icon_right" href="https://wa.me/79952190996" target="_blank"><span class="btn__text">Написать в WhatsApp</span>
                       <svg class="btn__icon btn__icon--white btn__icon--right">
                         <use xlink:href="#icon_wa"></use>
                       </svg></a>
@@ -296,7 +327,7 @@
                   </div>
                   <div class="team_slide__info"> 
                     <p class="team_slide__title">Парфентьев Олег Дмитриевич</p>
-                    <p class="team_slide__text">Директор</p><a class="team_slide__btn btn btn--black btn--icon_right" href="" target="_blank"><span class="btn__text">Написать в WhatsApp</span>
+                    <p class="team_slide__text">Директор</p><a class="team_slide__btn btn btn--black btn--icon_right" href="https://wa.me/79958707707" target="_blank"><span class="btn__text">Написать в WhatsApp</span>
                       <svg class="btn__icon btn__icon--white btn__icon--right">
                         <use xlink:href="#icon_wa"></use>
                       </svg></a>
@@ -311,7 +342,7 @@
                   </div>
                   <div class="team_slide__info"> 
                     <p class="team_slide__title">Сухарева Алиса Юрьевна</p>
-                    <p class="team_slide__text">СММ менеджер</p><a class="team_slide__btn btn disabled btn--black btn--icon_right" href="" target="_blank"><span class="btn__text">Написать в WhatsApp</span>
+                    <p class="team_slide__text">СММ менеджер</p><a class="team_slide__btn btn disabled btn--black btn--icon_right" href="https://wa.me/79242400077" target="_blank"><span class="btn__text">Написать в WhatsApp</span>
                       <svg class="btn__icon btn__icon--white btn__icon--right">
                         <use xlink:href="#icon_wa"></use>
                       </svg></a>
@@ -379,29 +410,29 @@
             <div class="footer__main"><a class="footer__logo" href="/"><img class="image" data-src="/assets/img/main_logo.svg" alt="" data-lazy=""/></a>
               <div class="footer__table">
                 <div class="footer__column">
-                  <p class="footer__caption">Авто</p><a class="footer__link" href="/japan" data-active-link="">Авто из Японии</a><a class="footer__link" href="/korea" data-active-link="">Авто из Кореи</a><a class="footer__link" href="/china" data-active-link="">Авто из Китая</a><a class="footer__link" href="/auc" data-active-link="" target="_blank">Онлайн-аукционы</a>
+                  <p class="footer__caption">Авто</p><a class="footer__link" href="/japan" data-active-link="">Авто из Японии</a><a class="footer__link" href="/korea" data-active-link="">Авто из Кореи</a><a class="footer__link" href="/china" data-active-link="">Авто из Китая</a>
                 </div>
                 <div class="footer__column">
                   <p class="footer__caption">Motorway</p><a class="footer__link" href="/about" data-active-link="">О компании</a><a class="footer__link" href="/contacts" data-active-link="">Контакты</a><a class="footer__link" href="/faq" data-active-link="">FAQ</a>
                 </div>
                 <div class="footer__column">
-                  <p class="footer__caption">Социальные сети</p><a class="footer__link" href="" target="_blank">
+                  <p class="footer__caption">Социальные сети</p><a class="footer__link" href="https://t.me/motorway_vl" target="_blank">
                     <svg class="icon">
                       <use xlink:href="#icon_tg"></use>
-                    </svg> Telegram</a><a class="footer__link" href="" target="_blank">
+                    </svg> Telegram</a><a class="footer__link" href="https://vk.com/motorwayvl" target="_blank">
                     <svg class="icon">
                       <use xlink:href="#icon_vk"></use>
-                    </svg> ВКонтакте</a><a class="footer__link" href="" target="_blank">
+                    </svg> ВКонтакте</a><a class="footer__link" href="https://instagram.com/MOTORWAY_VL" target="_blank">
                     <svg class="icon">
                       <use xlink:href="#icon_inst"></use>
-                    </svg> Instagram</a><a class="footer__link" href="" target="_blank">
+                    </svg> Instagram</a><a class="footer__link" href="https://www.youtube.com/@MOTORWAY_VL" target="_blank">
                     <svg class="icon">
                       <use xlink:href="#icon_yt"></use>
                     </svg> YouTube</a>
                 </div>
                 <div class="footer__column">
-                  <p class="footer__caption">Контакты</p><a class="footer__link" href="tel:+7 (908) 450-10-05">+7 (908) 450-10-05</a><a class="footer__link" href="mailto:motorway-vl@gmail.com">motorway-vl@gmail.com</a><a class="footer__link" href="" target="_blank">Владивосток, Нейбута, 87</a>
-                  <p class="footer__caption footer__caption--small">ПН-ПТ 08:00-18:00			</p>
+                  <p class="footer__caption">Контакты</p><a class="footer__link" href="tel:+7 (924) 240-00-77">+7 (924) 240-00-77</a><a class="footer__link" href="mailto:motorwayvl@gmail.com">motorwayvl@gmail.com</a><a class="footer__link" href="https://yandex.ru/maps/-/CDq27M-L" target="_blank">Владивосток, Океанский пр. 17 (Фреш Плаза) </a>
+                  <p class="footer__caption footer__caption--small">ПН-ПТ 12:00-20:00			</p>
                 </div>
               </div>
             </div>

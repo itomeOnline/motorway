@@ -1,0 +1,32 @@
+mixin advanCard(icon, title, text)
+	.advantages_slide.swiper-slide 
+		.advantages_slide__icon 
+			+imgSvg(icon, '', 'image')
+		p.advantages_slide__title= title
+		p.advantages_slide__text!= text
+
+section.section.advantages
+	.advantages__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title При покупке авто из Кореи #[br.medium] вы можете рассчитывать на
+
+		.advantages__slider.slider.swiper 
+			.swiper-wrapper
+				+advanCard(`${assetsPath}/img/advan_icon_1.svg`, 'Низкую цену', 'Автомобиль, привезенный из Кореи, обходится до 20-40% дешевле, чем купить аналогичную модель в России.')
+				+advanCard(`${assetsPath}/img/advan_icon_10.svg`, 'Высокое качество', 'Качество сборки на заводах Кореи значительно лучше, чем у таких же авто, собранных в РФ. Проведя независимую экспертизу, мы сможем это подтвердить.')
+				+advanCard(`${assetsPath}/img/advan_icon_3.svg`, 'Чистую историю', 'Вы будете первым хозяином авто в РФ. И никаких проблем с документами: 100% гарантия, что авто не в угоне, не распил и т.д.')
+				+advanCard(`${assetsPath}/img/advan_icon_11.svg`, 'Техническое состояние', 'В Корее прекрасные дороги и топливо высочайшего класса. Корейцы своевременно обслуживают автомобиль только у официальных представителей. ')
+				+advanCard(`${assetsPath}/img/advan_icon_12.svg`, 'Современный дизайн', 'Комплектации авто из Кореи богаче, чем у аналогов в РФ. И речь идёт не только про корейские марки, а также про BMW, Mercedes, Audi и других «европейцев».')
+				+advanCard(`${assetsPath}/img/advan_icon_7.svg`, 'Небольшой пробег', 'Корейцы меняют авто каждые 2-3 года, даже если наездили всего 50 тысяч км. Это значит, что вы можете выбрать свежий авто в отличном состоянии.')
+				+advanCard(`${assetsPath}/img/advan_icon_6.svg`, 'Надёжность', 'Мы работаем только с проверенными продавцами. До покупки проводим независимую экспертизу гос. образца, которая состоит из 100 пунктов. ')
+				+advanCard(`${assetsPath}/img/advan_icon_13.svg`, 'Эксклюзивные модели', 'Можем привезти авто, которые корейцы производят для внутреннего рынка. В отличном состоянии и за выгодную цену.')
+				+advanCard(`${assetsPath}/img/advan_icon_9.svg`, 'Комплекс доп. услуг', 'Нужны автозапчасти или расходники из Кореи? Привезём вместе в автомобилем.')
+				
+			
+			.slider__nav.advantages__nav
+				.slider__buttons.advantages__nav_buttons
+					button.slider__button.slider__button--prev.advantages__slider_btn--prev
+						+svg('arrow_slider')
+					button.slider__button.slider__button--next.advantages__slider_btn--next
+						+svg('arrow_slider')

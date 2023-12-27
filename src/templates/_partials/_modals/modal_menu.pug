@@ -1,5 +1,37 @@
-//- .modal_menu.modal(data-modal="menu")
-//-     button.modal_close.modal_menu__close(data-modal-close)
-//-         +svg('close', 'icon')
-//-     .modal_menu__logo
-//-         +imgSvg(`${assetsPath}/img/header-logo.svg`, '', 'image')
+.modal_menu.modal(data-modal="modal_menu")
+	
+	button.modal_menu__close(data-modal-close="")
+		+svg('close', 'icon')
+
+	.modal_menu__content(data-simplebar="") 
+		.modal_menu__block
+			p.modal_menu__title Меню
+
+			a.footer__link.footer__link--menu(href="/japan", data-active-link="") Авто из Японии
+			a.footer__link.footer__link--menu(href="/korea", data-active-link="") Авто из Кореи
+			a.footer__link.footer__link--menu(href="/china", data-active-link="") Авто из Китая
+			a.footer__link.footer__link--menu(href="/about", data-active-link="") О компании
+			a.footer__link.footer__link--menu(href="/contacts", data-active-link="") Контакты
+			a.footer__link.footer__link--menu(href="/faq", data-active-link="") FAQ
+		
+		.modal_menu__block
+			p.modal_menu__title Мы в соцсетях
+
+			a.footer__link.footer__link--menu(href="https://t.me/motorway_vl", target="_blank") #[+svg('icon_tg', 'icon')] Telegram
+			a.footer__link.footer__link--menu(href="https://wa.me/79242400077", target="_blank") #[+svg('icon_wa', 'icon')] WhatsApp
+			a.footer__link.footer__link--menu(href="https://vk.com/motorwayvl", target="_blank") #[+svg('icon_vk', 'icon')] ВКонтакте
+			a.footer__link.footer__link--menu(href="https://instagram.com/MOTORWAY_VL", target="_blank") #[+svg('icon_inst', 'icon')] Instagram
+			a.footer__link.footer__link--menu(href="https://www.youtube.com/@MOTORWAY_VL", target="_blank") #[+svg('icon_yt', 'icon')] YouTube
+			
+
+		.modal_menu__buttons
+			button.modal_menu__btn.btn.btn--filled(data-linked-modal="modal_calc_auto")
+				span.btn__text Рассчитать авто
+			a.modal_menu__btn.btn.btn--outlined(href="tel:+7 (924) 240-00-77")
+				span.btn__text +7 (924) 240-00-77
+			//-a.header__buttons_phone.header__buttons_phone--menu.header__auc_btn(href="/auc", target="_blank") Перейти на аукцион #[+svg('arrow_right', 'icon')]
+
+	.modal_menu__bottom 
+		a.modal_menu__itome(href="https://itome.online/", target="_blank")
+			+imgSvg(`${assetsPath}/img/itome_letters.svg`, '', 'image')
+				

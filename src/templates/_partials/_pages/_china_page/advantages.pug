@@ -1,0 +1,32 @@
+mixin advanCard(icon, title, text)
+	.advantages_slide.swiper-slide 
+		.advantages_slide__icon 
+			+imgSvg(icon, '', 'image')
+		p.advantages_slide__title= title
+		p.advantages_slide__text!= text
+
+section.section.advantages
+	.advantages__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title При покупке авто из Китая #[br.medium] вы можете рассчитывать на
+
+		.advantages__slider.slider.swiper 
+			.swiper-wrapper
+				+advanCard(`${assetsPath}/img/advan_icon_1.svg`, 'Честную цену', 'Вы покупаете новый автомобиль, который китайцы производят для внутреннего рынка. Без накруток продавцов и скрытых комиссий.')
+				+advanCard(`${assetsPath}/img/advan_icon_14.svg`, 'Отсутствие рисков', 'Китай и Россия дружественные страны. Нет опасений попасть под санкции, и не дождаться своего автомобиля.')
+				+advanCard(`${assetsPath}/img/advan_icon_3.svg`, 'Доступ к запчастям', 'Оригинальные автозапчасти и комплектующие на китайский авто можно купить как в России, так и заказать напрямую у китайских производителей.')
+				+advanCard(`${assetsPath}/img/advan_icon_15.svg`, 'Передовые технологии', 'Технологичность, эффектный дизайн и набор современных интеллектуальных систем: всё это доступно в новых китайских авто.')
+				+advanCard(`${assetsPath}/img/advan_icon_16.svg`, 'Новые авто', 'Мы сотрудничаем с заводами и дилерами и предлагаем только новые автомобили, прошедшие предварительную независимую экспертизу.')
+				+advanCard(`${assetsPath}/img/advan_icon_17.svg`, 'Под любой бюджет', 'Низкая стоимость среди прямых конкурентов — главный козырь китайских авто. Вы можете купить авто, схожий с Mercedes-Benz GLE, но в 2 раза дешевле.')
+				+advanCard(`${assetsPath}/img/advan_icon_12.svg`, 'Интересный дизайн', 'От копирования чужих, порой устаревших стилистических решений, китайцы перешли к разработке собственного дизайна: дерзкого, яркого, делового.')
+				+advanCard(`${assetsPath}/img/advan_icon_6.svg`, 'Безопасность', 'Автомобили из Китая полностью адаптированы для российских погодных и климатических условий.')
+				+advanCard(`${assetsPath}/img/advan_icon_18.svg`, 'Конкурентоспособность', 'Китайские инженеры ежегодно совершенствую и дорабатывают свои автомобили. Китайские авто 10 лет назад и сегодня — совершенно разные машины.')
+				
+			
+			.slider__nav.advantages__nav
+				.slider__buttons.advantages__nav_buttons
+					button.slider__button.slider__button--prev.advantages__slider_btn--prev
+						+svg('arrow_slider')
+					button.slider__button.slider__button--next.advantages__slider_btn--next
+						+svg('arrow_slider')

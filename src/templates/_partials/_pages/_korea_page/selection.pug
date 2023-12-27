@@ -1,0 +1,41 @@
+section.section.selection
+	.selection__container.container 
+
+		.selection__content
+
+			.selection_info
+				h2.selection_info__title Подберем #[span.green более #[br.mobile] 10 автомобилей] #[br.medium] под ваш #[br.mobile] бюджет и пожелания 
+				p.selection_info__text Сотрудничаем с проверенными дилерами и аукционами, поэтому вы можете выбрать авто любой модели и комплектации. Корейские, японские, китайские, европейские бренды. А также новые и редкие автомобили.
+
+				.selection_info__list 
+					.selection_info__item
+						+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+						p.text Не нужно терять время на самостоятельные поиски
+					.selection_info__item
+						+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+						p.text Подберем лучшее соотношение #[br.mobile] цены и качества
+					.selection_info__item
+						+imgSvg(`${assetsPath}/img/icon_check.svg`, '', 'icon')
+						p.text Это совершенно бесплатно 
+
+			form.selection_form(data-form-id="select_korea_form", action="/mailer", data-mailer="")
+				input(type="hidden", name="form", value="Получить подборку авто (авто из Кореи)")
+
+				h3.selection_form__title Получить подборку авто
+
+				.selection_form__inputs
+					.input_wrapper.input_wrapper--minimalistic(data-input-wrapper="")
+						input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+						label.input_wrapper__label Ваше имя
+						.input_wrapper__tooltip(data-input-tooltip="")
+					.input_wrapper.input_wrapper--minimalistic(data-input-wrapper="")
+						input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+						label.input_wrapper__label Номер телефона
+						.input_wrapper__tooltip(data-input-tooltip="")
+					.input_wrapper.input_wrapper--textarea(data-input-wrapper="")
+						textarea.input_wrapper__textarea(name="wishes", placeholder="Пожелания к авто (марка, модель, год, привод, объём, цвет и т.д.)")
+						
+				button.selection_form__btn.btn.btn--filled
+					span.btn__text Отправить
+				
+				p.selection_form__privacy Нажимая на кнопку, вы соглашаетесь #[br.desktop] с #[a.link(href="/privacy") политикой конфиденциальности]

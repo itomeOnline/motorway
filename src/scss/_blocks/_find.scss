@@ -55,6 +55,54 @@
                 bottom: em(-240);
             }
         }
+
+        &--korea {
+            width: em(1436);
+            height: em(1290);
+
+            bottom: em(-720);
+            left: em(-360);
+
+            @media(max-width: 1260px) {
+                width: em(1146);
+                height: em(1032);
+
+                left: em(-260);
+                bottom: em(-560);
+            }
+
+            @media(max-width: 500px) {
+                width: em(510);
+                height: em(458);
+
+                left: em(-120);
+                bottom: em(-240);
+            }
+        }
+
+        &--china {
+            width: em(1436);
+            height: em(1290);
+
+            bottom: em(-710);
+            left: em(-350);
+
+            @media(max-width: 1260px) {
+                width: em(1146);
+                height: em(1032);
+
+                left: em(-260);
+                bottom: em(-560);
+            }
+
+            @media(max-width: 500px) {
+                width: em(510);
+                height: em(458);
+
+                left: em(-120);
+                bottom: em(-240);
+            }
+        }
     }
 
     &__info {

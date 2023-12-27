@@ -12,7 +12,7 @@ function contactsMap (el) {
         token: mapToken,
         style: mapStyle,
         zoom: 15,
-        mapCenter: [131.958967, 43.121333],
+        mapCenter: [131.886448, 43.119550],
     });
  
 }

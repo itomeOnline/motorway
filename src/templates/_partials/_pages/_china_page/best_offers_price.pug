@@ -1,0 +1,22 @@
+section.section.best_offers.best_offers--china_prices
+	.best_offers__container.container(data-catalog-prices-root="") 
+
+		.section_block.section_block--center
+			h2.section_block__title Подборки автомобилей
+			p.section_block__text Лучшие автомобили под ваш бюджет
+
+		.best_offers__tabs(data-catalog-prices-btns="")
+
+
+		.best_offers__content(data-catalog-prices-content="")
+			.best_offers__slider.slider.swiper 
+				.swiper-wrapper
+					
+			.slider__nav.best_offers__nav.grid
+				.dot
+				.slider__buttons.best_offers__nav_buttons
+					button.slider__button.slider__button--prev.best_offers__slider_btn--prev
+						+svg('arrow_slider')
+					button.slider__button.slider__button--next.best_offers__slider_btn--next
+						+svg('arrow_slider')
+				a.best_offers__nav_link.header__auc_btn(href="/auc", target="_blank") Посмотреть больше на аукционе #[+svg('arrow_small', 'icon')]

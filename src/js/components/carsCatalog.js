@@ -138,7 +138,7 @@ const carsCatalog = (_ => {
 
                 </div>
                 <div class="slider__nav best_offers__nav grid">
-                    <div class="dot"></div>
+                    
                     <div class="slider__buttons best_offers__nav_buttons">
                         <button class="slider__button slider__button--prev best_offers__slider_btn--prev">
                             <svg>
@@ -151,10 +151,7 @@ const carsCatalog = (_ => {
                             </svg>
                         </button>
                     </div>
-                    <a class="best_offers__nav_link header__auc_btn" href="/auc" target="_blank">Посмотреть больше на аукционе 
-                    <svg class="icon">
-                        <use xlink:href="#arrow_small"></use>
-                    </svg></a>
+                    
                 </div>
             </div>
             

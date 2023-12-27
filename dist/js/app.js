@@ -20643,7 +20643,7 @@
               "geometry": {
                   "type": "Point",
                   "coordinates": [
-                      131.958967, 43.121333
+                      131.886448, 43.119550
                   ]
               }
           },
@@ -20661,7 +20661,7 @@
           token: mapToken,
           style: mapStyle,
           zoom: 15,
-          mapCenter: [131.958967, 43.121333],
+          mapCenter: [131.886448, 43.119550],
       });
    
   }
@@ -20869,7 +20869,7 @@
 
                 </div>
                 <div class="slider__nav best_offers__nav grid">
-                    <div class="dot"></div>
+                    
                     <div class="slider__buttons best_offers__nav_buttons">
                         <button class="slider__button slider__button--prev best_offers__slider_btn--prev">
                             <svg>
@@ -20882,10 +20882,7 @@
                             </svg>
                         </button>
                     </div>
-                    <a class="best_offers__nav_link header__auc_btn" href="/auc" target="_blank">Посмотреть больше на аукционе 
-                    <svg class="icon">
-                        <use xlink:href="#arrow_small"></use>
-                    </svg></a>
+                    
                 </div>
             </div>
             
@@ -21087,7 +21084,7 @@
 
                 </div>
                 <div class="slider__nav best_offers__nav grid">
-                    <div class="dot"></div>
+                    
                     <div class="slider__buttons best_offers__nav_buttons">
                         <button class="slider__button slider__button--prev best_offers__slider_btn--prev">
                             <svg>
@@ -21100,10 +21097,7 @@
                             </svg>
                         </button>
                     </div>
-                    <a class="best_offers__nav_link header__auc_btn" href="/auc" target="_blank">Посмотреть больше на аукционе 
-                    <svg class="icon">
-                        <use xlink:href="#arrow_small"></use>
-                    </svg></a>
+                    
                 </div>
             </div>
             

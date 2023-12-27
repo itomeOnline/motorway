@@ -1,0 +1,50 @@
+section.section.home.home--china
+	.home__img.home__img--china
+		+img(`${assetsPath}/img/home_pic_4.png`, '', 'image')
+
+	.home__container.container
+		.section_block
+			h1.section_block__title.section_block__title--white Автомобили #[br] из Китая
+			p.section_block__text.section_block__text--white Подберём, купим, растаможим и доставим авто в любой город РФ. #[br.medium] Проведём независимую экспертизу на законодательном уровне. #[br.medium] Вы получите надёжный проверенный автомобиль: 3-4 недели #[br.medium] с момента покупки, и авто приходит на стоянку во Владивосток.
+
+		
+		.home_resp_block
+			.home_resp_block__pic
+				+img(`${assetsPath}/img/oleg_small.png`, '', 'image')
+			.home_resp_block__pic
+				+img(`${assetsPath}/img/sergey_small.png`, '', 'image')
+
+			p.home_resp_block__text Несем ответственность #[br.mobile] за подбор авто
+
+		.home_infinite_slider.swiper
+			.swiper-wrapper 
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/china_brand_1.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/china_brand_2.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/china_brand_3.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/china_brand_4.svg`, '', 'image')
+				.home_infinite_slider__slide.swiper-slide
+					+imgSvg(`${assetsPath}/img/china_brand_5.svg`, '', 'image')
+
+
+form.footer_form(data-form-id="calc_auto_china", action="/mailer", data-mailer="")
+	input(type="hidden", name="form", value="Рассчитать авто из Китая (первый экран, страница Китая)")
+
+	.footer_form__container.container
+		h3.footer_form__title Рассчитать авто из Китая
+
+		.footer_form__form
+			.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+				input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+				label.input_wrapper__label Ваше имя
+				.input_wrapper__tooltip(data-input-tooltip="")
+			.input_wrapper.input_wrapper--minimalistic.black(data-input-wrapper="")
+				input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+				label.input_wrapper__label Номер телефона
+				.input_wrapper__tooltip(data-input-tooltip="")
+			button.footer_form__btn.btn.btn--black
+				span.btn__text Отправить
+		

@@ -47,6 +47,54 @@
         position: absolute;
         z-index: 1;
 
+        &--china {
+            width: 80vw;
+            height: 70vh;
+
+            bottom: em(140);
+            right: em(-500);
+
+            @media(max-width: 1260px) {
+                bottom: em(150);
+                right: em(-360);
+
+                width: em(1062);
+                height: em(494);
+            }
+
+            @media(max-width: 500px) {
+                width: em(496);
+                height: em(230);
+
+                bottom: em(180);
+                right: em(-160);
+            }
+        }
+
+        &--korea {
+            width: 80vw;
+            height: 78vh;
+
+            bottom: em(80);
+            right: em(-400);
+
+            @media(max-width: 1260px) {
+                bottom: em(80);
+                right: em(-240);
+
+                width: em(1026);
+                height: em(548);
+            }
+
+            @media(max-width: 500px) {
+                width: em(478);
+                height: em(254);
+
+                bottom: em(150);
+                right: em(-100);
+            }
+        }
+
         &--japan {
             width: 100vw;
             height: 90vh;

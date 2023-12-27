@@ -1,8 +1,12 @@
 .privacy {
-	margin: 5em 0 5em;
+	padding-top: em(180);
 
-	@media(max-width: 1350px) {
-		font-size: .9em;
+	@media(max-width: 1260px) {
+		padding-top: em(124);
+	}
+
+	@media(max-width: 500px) {
+		padding-top: em(92);
 	}
 
 	&__container {
@@ -28,7 +32,7 @@
 	&__title {
 		margin-bottom: 0em;
     
-		color: black;
+		color: $c-black;
 		font-weight: 700;
 		font-size: 2.75em;
 		line-height: 1em;
@@ -43,6 +47,10 @@
 		&.is-inview {
 			transform: none;
 			opacity: 1;
+		}
+
+		@media(max-width: 500px) {
+			font-size: em(28);
 		}
 	}
 }
@@ -70,7 +78,7 @@
 
 		margin-bottom: .75em;
 
-		color: black;
+		color: $c-black;
 		font-weight: 700;
 		font-size: 1.8em;
 
@@ -216,7 +224,7 @@
 		}
 
 		.strong {
-			color: black;
+			color: $c-black;
 			font-weight: 700;
 		}
 	}
@@ -230,7 +238,7 @@
 	flex-direction: column;
 	margin-right: 4vw;
 
-	@media(max-width: 500px) {
+	@media(max-width: 1260px) {
 		display: none;
 	}
 
@@ -250,7 +258,7 @@
 		}
 
 		&.is-active {
-			color: black;
+			color: $c-black;
 		}
 
 		& + & {
