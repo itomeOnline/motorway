@@ -1,16 +1,21 @@
 .best_offers {
     padding-top: em(150);
 
+    height: em(1120);
+
     @media(max-width: 1260px) {
         padding-top: em(120);
+        height: 54.25em;
     }
 
     @media(max-width: 500px) {
         padding-top: em(80);
+        height: 50em;
     }
 
     &__tabs {
         margin-top: em(52);
+        margin-bottom: em(32);
 
         display: flex;
         align-items: center;
@@ -18,10 +23,23 @@
 
         @media(max-width: 1260px) {
 			margin-top: em(40);
+			margin-bottom: em(28);
 		}
 
 		@media(max-width: 500px) {
 			margin-top: em(32);
+
+            overflow: scroll hidden;
+            justify-content: flex-start;
+
+            scrollbar-width: none;
+            -webkit-scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                height: 0px;
+                width: 0px;
+                background: transparent;
+            }
 		}
     }
 
@@ -34,6 +52,9 @@
         padding: 6px 10px;
         border-radius: 8px;
         background: #F5F5F7;
+
+        white-space: nowrap;
+        flex: none;
 
         transition: background .2s, color .2s;
 
@@ -55,7 +76,6 @@
     }
 
     &__content {
-        margin-top: em(52);
 
         transform: scale3d(.98,.98,1);
 
@@ -64,13 +84,15 @@
 
         transition: opacity .2s,transform .2s;
 
-        @media(max-width: 1260px) {
-			margin-top: em(40);
-		}
+        min-height: em(606);
 
-		@media(max-width: 500px) {
-			margin-top: em(32);
-		}
+        @media(max-width: 1260px) {
+            min-height: em(508);
+        }
+
+        @media(max-width: 500px) {
+            min-height: em(500);
+        }
 
         &.is-active {
             opacity: 1;
@@ -84,6 +106,10 @@
         align-items: center;
 
         margin-left: auto;
+
+        @media(max-width: 500px) {
+            margin-left: 0;
+        }
 
         &:hover {
             color: $c-primary;

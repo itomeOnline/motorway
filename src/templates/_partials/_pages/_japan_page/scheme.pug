@@ -1,0 +1,60 @@
+section.section.scheme
+	.scheme__container.container 
+
+		.section_block.section_block--center
+			h2.section_block__title Простая схема покупки авто
+		
+		
+		.scheme__content 
+			.scheme__block
+				h3.scheme__block_title Перед покупкой
+
+				.scheme__block_wrap
+
+					.scheme_step
+						.scheme_step__img.scheme_step__img--purple
+							+img(`${assetsPath}/img/scheme_pic_1.png`, '', 'image')
+						
+						.scheme_step__info 
+							h4.scheme_step__title 1. Заявка
+							p.scheme_step__text Позвоните, напишите или оставьте заявку через сайт. Свяжемся с вами, зададим вопросы и обозначим дальнейший план действий. Вы будете понимать, за какую цену и в какие сроки вы получите свой автомобиль.
+							button.scheme_step__btn.btn.btn--small.btn--filled(data-linked-modal="modal_calc_auto") Рассчитать авто
+
+					.scheme_step
+						.scheme_step__img.scheme_step__img--green
+							+img(`${assetsPath}/img/scheme_pic_2.png`, '', 'image')
+						
+						.scheme_step__info 
+							h4.scheme_step__title 2. Двусторонний договор
+							p.scheme_step__text Заключаем с вами двусторонний договор, вы вносите гарантийный взнос. #[br.medium] Это можно сделать у нас в офисе или онлайн.
+							a.scheme_step__btn.btn.btn--small.btn--filled(href="") Скачать договор
+
+					.scheme_step
+						.scheme_step__img.scheme_step__img--blue
+							+img(`${assetsPath}/img/scheme_pic_3.png`, '', 'image')
+						
+						.scheme_step__info 
+							h4.scheme_step__title 3. Подбор и покупка авто
+							p.scheme_step__text После заключения договора начинаем подбирать для вас подходящие авто. Ищем до тех пор, пока вас не устроит предложенный вариант. Перед покупкой обязательно запрашиваем перевод аукционного листа, чтобы удостовериться на надёжности авто.
+		   
+		   
+			.scheme__block
+				h3.scheme__block_title После покупки
+
+				.scheme__block_wrap
+
+					.scheme_step
+						.scheme_step__img.scheme_step__img--yellow
+							+img(`${assetsPath}/img/scheme_pic_4.png`, '', 'image')
+						
+						.scheme_step__info 
+							h4.scheme_step__title 4. Оплата японской стороны
+							p.scheme_step__text Вы оплачиваете расходы по Японии через выгодный для вас банк. Мы подготавливаем автомобиль для отправки с японской стоянки во Владивосток, делаем фотоопись при приёмке в порту.
+
+					.scheme_step
+						.scheme_step__img.scheme_step__img--orange
+							+img(`${assetsPath}/img/scheme_pic_5.png`, '', 'image')
+						
+						.scheme_step__info 
+							h4.scheme_step__title 5. Таможня и передача авто
+							p.scheme_step__text После того, как автомобиль прибудет во Владивосток, вы оплачиваете пошлину и комиссию за наши услуги. Далее забираете самостоятельно авто, или мы можем организовать доставку в любой город РФ.

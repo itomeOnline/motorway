@@ -1,0 +1,165 @@
+.scheme_step {
+	width: 100%;
+    
+    display: flex;
+    align-items: center;
+
+    padding: em(28);
+
+    position: relative;
+
+    @media(max-width: 1260px) {
+        padding: em(24);
+    }
+
+    @media(max-width: 500px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: em(16) em(16) em(24);
+    }
+
+    &__img {
+        width: em(240);
+        height: em(150);
+
+        overflow: hidden;
+        border-radius: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: em(28);
+
+        flex: none;
+
+        @media(max-width: 1260px) {
+            width: em(165);
+            height: em(170);
+
+            margin-right: em(20);
+            border-radius: 14px;
+        }
+
+        @media(max-width: 500px) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: em(20);
+            height: em(156);
+        }
+
+        &--purple {
+            background: #F2D6FF;
+        }
+
+        &--green {
+            background: #C9FFD0 ;
+        }
+
+        &--blue {
+            background: #C3F3FF;
+        }
+
+        &--yellow {
+            background: #FFF5C2;
+        }
+
+        &--orange {
+            background: #FFD8C3;
+        }
+
+        .image {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        flex: 1;
+    }
+
+    &__title {
+        font-size: em(24);
+        line-height: em(30,24);
+        font-weight: 700;
+        font-feature-settings: 'clig' off, 'liga' off;
+        color: $c-black;
+
+        @media(max-width: 1260px) {
+            font-size: em(18);
+            line-height: em(26,18);
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(16);
+            line-height: em(22,16);
+        }
+    }
+
+    &__text {
+        font-size: em(18);
+        line-height: em(24,18);
+        font-weight: 400;
+        font-feature-settings: 'clig' off, 'liga' off;
+        color: $c-grey;
+
+        margin-top: .75rem;
+
+        width: 80%;
+
+        @media(max-width: 1260px) {
+            font-size: em(14);
+            line-height: em(20,14);
+
+            margin-top: .5rem;
+            width: 90%;
+        }
+
+        @media(max-width: 500px) {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        width: fit-content;
+
+        margin-top: 1.25rem;
+
+        @media(max-width: 1260px) {
+            margin-top: 1rem;
+        }
+
+        &:hover {
+            background: $c-black !important;
+            color: #fff !important;
+        }
+    }
+
+    & + & {
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: em(28);
+            height: 1px;
+            width: calc(100% - em(84) - em(240));
+            background: #E8E8EA;
+
+            @media(max-width: 1260px) {
+                right: em(24);
+                width: calc(100% - em(68) - em(165));
+            }
+
+            @media(max-width: 500px) {
+                right: 1rem;
+                width: calc(100% - 2rem);
+            }
+        }
+    }
+}

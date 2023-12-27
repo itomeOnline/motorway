@@ -1,0 +1,158 @@
+[
+    {
+        "id" : 1,
+        "title": "Кей-кары",
+        "slug": "kcars",
+        "country": "korea",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 100 000",
+                "brand": "KIA Morning, 2021",
+                "params": "14 000 км | 1000 cc | 76 лс"
+            },
+            {
+                "id": 2,
+                "price": "1 200 000",
+                "brand": "KIA RAY, 2021",
+                "params": "33 000 км | 1000 cc | 78 лс"
+            },
+            {
+                "id": 3,
+                "price": "1 000 000",
+                "brand": "Chevrolet Spark, 2021",
+                "params": "21 000 км | 1000 cc | 75 лс"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "title": "Хэтчбеки",
+        "slug": "hatchbacks",
+        "country": "korea",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 900 000",
+                "brand": "Hyundai Venue, 2021",
+                "params": "27 000 км | 1600 cc | 123 лс"
+            },
+            {
+                "id": 2,
+                "price": "2 000 000",
+                "brand": "KIA Soul, 2021",
+                "params": "21 000 км | 1600 cc | 123 лс"
+            },
+            {
+                "id": 3,
+                "price": "2 000 000",
+                "brand": "Kia Niro, 2021",
+                "params": "19 000 км | 1600 cc | 141 лс"
+            }
+        ]
+    },
+    {
+        "id" : 3,
+        "title": "Джипы",
+        "slug": "jeeps",
+        "country": "korea",
+        "cars": [
+            {
+                "id": 1,
+                "price": "3 200 000",
+                "brand": "Hyundai Palisade, 2021",
+                "params": "34 000 км | 2200 cc | 202 лс"
+            },
+            {
+                "id": 2,
+                "price": "3 900 000",
+                "brand": "Kia Mohave, 2020",
+                "params": "24 000 км | 3000 cc | 249 лс"
+            },
+            {
+                "id": 3,
+                "price": "3 100 000",
+                "brand": "SsangYoung Rexton, 2021",
+                "params": "19 000 км | 2200 cc | 202 лс"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "title": "Минивены",
+        "slug": "minivans",
+        "country": "korea",
+        "cars": [
+            {
+                "id": 1,
+                "price": "3 100 000",
+                "brand": "Hyundai Starex, 2020",
+                "params": "34 000 км | 2500 cc | 175 лс"
+            },
+            {
+                "id": 2,
+                "price": "3 400 000",
+                "brand": "Kia Carnival, 2021",
+                "params": "13 000 км | 2200 cc | 202 лс"
+            },
+            {
+                "id": 3,
+                "price": "4 700 000",
+                "brand": "Toyota Sienna, 2021",
+                "params": "23 000 км | 2500 cc | 186 лс"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "title": "Седаны",
+        "slug": "sedans",
+        "country": "korea",
+        "cars": [
+            {
+                "id": 1,
+                "price": "2 000 000",
+                "brand": "Hyundai Avante, 2021",
+                "params": "27 000 км | 1600 cc | 123 лс"
+            },
+            {
+                "id": 2,
+                "price": "2 300 000",
+                "brand": "Kia K5, 2021",
+                "params": "23 000 км | 2000 cc | 160 лс"
+            },
+            {
+                "id": 3,
+                "price": "2 600 000",
+                "brand": "Kia K7, 2021",
+                "params": "17 000 км | 2500 cc | 198 лс"
+            }
+        ]
+    },
+    {
+        "id" : 6,
+        "title": "Кроссоверы",
+        "slug": "crossovers",
+        "country": "korea",
+        "cars": [
+            {
+                "id": 1,
+                "price": "2 800 000",
+                "brand": "Kia Sorento, 2021",
+                "params": "27 000 км | 2200 cc | 202 лс"
+            },
+            {
+                "id": 2,
+                "price": "2 250 000",
+                "brand": "Kia Sportage, 2020",
+                "params": "33 000 км | 2000 cc | 186 лс"
+            },
+            {
+                "id": 3,
+                "price": "2 700 000",
+                "brand": "Hyundai Santa Fe, 2021",
+                "params": "29 000 км | 2200 cc | 194 лс"
+            }
+        ]
+    }
+]

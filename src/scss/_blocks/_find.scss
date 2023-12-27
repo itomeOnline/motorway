@@ -1,0 +1,121 @@
+.find {
+	
+    &__content {
+        border-radius: 28px;
+        background: linear-gradient(180deg, #434343 0%, #151515 100%);
+
+        padding: em(40) em(40) em(140);
+        overflow: hidden;
+        
+        display: grid;
+        grid-template-columns: em(760) auto;
+
+        position: relative;
+        overflow: hidden;
+
+        @media(max-width: 1260px) {
+            border-radius: 24px;
+            grid-template-columns: 100%;
+            gap: em(40);
+
+            padding-bottom: em(350);
+        }
+
+        @media(max-width: 500px) {
+            padding: em(24) em(24) em(190);
+            border-radius: 20px;
+            gap: em(28);
+        }
+    }	
+
+    &__img {
+        position: absolute;
+        z-index: 1;
+
+        &--japan {
+            width: em(1436);
+            height: em(1290);
+
+            bottom: em(-690);
+            left: em(-340);
+
+            @media(max-width: 1260px) {
+                width: em(1146);
+                height: em(1032);
+
+                left: em(-260);
+                bottom: em(-560);
+            }
+
+            @media(max-width: 500px) {
+                width: em(510);
+                height: em(458);
+
+                left: em(-120);
+                bottom: em(-240);
+            }
+        }
+    }
+
+    &__info {
+        padding: em(12);
+
+        position: relative;
+        z-index: 2;
+
+        @media(max-width: 1260px) {
+            max-width: em(640);
+            padding: 0;
+        }
+
+        @media(max-width: 500px) {
+            max-width: 100%;
+        }
+    }
+    
+    &__info_title {
+        font-size: em(52);
+        line-height: em(58,52);
+        font-weight: 700;
+        font-feature-settings: 'clig' off, 'liga' off;
+        color: #fff;
+
+        @media(max-width: 1260px) {
+            font-size: em(40);
+            line-height: em(46,40);
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(24);
+            line-height: em(30,24);
+        }
+
+        .green {
+            color: $c-primary;
+        }
+    }
+
+    &__info_text {
+        font-size: em(20);
+        line-height: em(28,20);
+        font-weight: 400;
+        font-feature-settings: 'clig' off, 'liga' off;
+        color: #fff;
+
+        margin-top: 1.5rem;
+
+        @media(max-width: 1260px) {
+            font-size: em(18);
+            line-height: em(26,18);
+
+            margin-top: 1.25rem;
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(14);
+            line-height: 1.25rem;
+
+            margin-top: .75rem;
+        }
+    }
+}

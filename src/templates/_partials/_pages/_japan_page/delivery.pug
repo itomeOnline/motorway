@@ -1,0 +1,15 @@
+section.section.delivery
+	.delivery__container.container 
+
+		.delivery__content
+		
+			.delivery__info 
+				h3.delivery__title Доставка авто #[br] до 3-4 недель
+				p.delivery__text Это среднее время доставки и растаможки с #[br.medium] момента покупки автомобиля. За вами будет #[br.medium] закреплён менеджер, который оперативно #[br.medium] сообщит вам о сроках прибытия во Владивосток
+
+				a.delivery__btn.btn.btn--filled.btn--icon_right(href="", target="_blank")
+					span.btn__text Написать в WhatsApp
+					+svg("icon_wa", "btn__icon btn__icon--black btn__icon--right")
+
+			.delivery__img
+				+img(`${assetsPath}/img/delivery_pic.png`, '', 'image')

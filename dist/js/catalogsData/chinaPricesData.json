@@ -1,0 +1,132 @@
+[
+    {
+        "id" : 1,
+        "title": "0,6 - 1 млн. ₽",
+        "slug": "1",
+        "country": "chinaPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 000 000",
+                "brand": "Geely Vision x3, 2020",
+                "params": "37 000 км | 1500 cc | 109 лс"
+            },
+            {
+                "id": 2,
+                "price": "1 000 000",
+                "brand": "JAC Jiayue, 2020",
+                "params": "32 000 км | 1500 cc | 150 лс"
+            },
+            {
+                "id": 3,
+                "price": "970 000",
+                "brand": "Geely Emgrand GL, 2020",
+                "params": "28 000 км | 1500 cc | 109 лс"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "title": "1 - 1,4 млн. ₽",
+        "slug": "1.4",
+        "country": "chinaPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 150 000",
+                "brand": "Changan CS15, 2021",
+                "params": "27 000 км | 1500 cc | 105 лс"
+            },
+            {
+                "id": 2,
+                "price": "1 350 000",
+                "brand": "FAW Bestune T77, 2021",
+                "params": "22 000 км | 1500 cc | 160 лс"
+            },
+            {
+                "id": 3,
+                "price": "1 300 000",
+                "brand": "Chery Tiggo 4, 2021",
+                "params": "25 000 км | 1500 cc | 113 лс"
+            }
+        ]
+    },
+    {
+        "id" : 3,
+        "title": "1,4 - 1,8 млн. ₽",
+        "slug": "1.8",
+        "country": "chinaPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 650 000",
+                "brand": "Geely Coolray, 2021",
+                "params": "23 000 км | 1500 cc | 177 лс"
+            },
+            {
+                "id": 2,
+                "price": "1 550 000",
+                "brand": "Exeed LX, 2021",
+                "params": "19 000 км | 1500 cc | 156 лс"
+            },
+            {
+                "id": 3,
+                "price": "1 700 000",
+                "brand": "Lynk&Co 1, 2021",
+                "params": "24 000 км | 1500 cc | 181 лс"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "title": "1,8 - 2,2 млн. ₽",
+        "slug": "2.2",
+        "country": "chinaPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 850 000",
+                "brand": "Exeed TXL, 2021",
+                "params": "23 000 км | 1600 cc | 197 лс"
+            },
+            {
+                "id": 2,
+                "price": "2 000 000",
+                "brand": "Changan 75 PLUS, 2021",
+                "params": "18 000 км | 2000 cc | 229 лс"
+            },
+            {
+                "id": 3,
+                "price": "1 950 000",
+                "brand": "ByD Song Pro, 2021",
+                "params": "21 000 км | 1500 cc | 160 лс"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "title": "Более 2,2 млн. ₽",
+        "slug": "2.2+",
+        "country": "chinaPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "2 600 000",
+                "brand": "Geely Atlas, 2023",
+                "params": "9000 км | 2000 cc | 218 лс"
+            },
+            {
+                "id": 2,
+                "price": "2 700 000",
+                "brand": "Lynk&Co 5, 2021",
+                "params": "15 000 км | 2000 cc | 249 лс"
+            },
+            {
+                "id": 3,
+                "price": "2 900 000",
+                "brand": "ByD Tang, 2021",
+                "params": "13 000 км | 2000 cc | 192 лс"
+            }
+        ]
+    }
+]

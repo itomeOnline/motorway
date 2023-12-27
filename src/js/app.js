@@ -16,6 +16,7 @@ import faqDropdown from "./components/faqDropdown";
 import teamSlider from "./components/sliders/teamSlider";
 import homeInfiniteSlider from "./components/sliders/homeInfiniteSlider";
 import carsCatalog from "./components/carsCatalog";
+import carsPricesCatalog from "./components/carsPricesCatalog";
 import advanSlider from "./components/sliders/advanSlider";
 
 setTimeout(() => { 
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", _ => {
     teamSlider();
     homeInfiniteSlider();
     advanSlider();
+    
 
     if (document.querySelector('.best_offers--japan')) {
 
@@ -54,7 +56,51 @@ document.addEventListener("DOMContentLoaded", _ => {
         })();
     }
 
-    
+    if (document.querySelector('.best_offers--japan_prices')) {
+
+        (async _ => {
+            const res = await fetch('/js/catalogsData/japanPricesData.json');
+            const cars = await res.json();
+            carsPricesCatalog.init(cars);
+        })();
+    }
+
+    if (document.querySelector('.best_offers--korea')) {
+
+        (async _ => {
+            const res = await fetch('/js/catalogsData/koreaData.json');
+            const cars = await res.json();
+            carsCatalog.init(cars);
+        })();
+    }
+
+    if (document.querySelector('.best_offers--korea_prices')) {
+
+        (async _ => {
+            const res = await fetch('/js/catalogsData/koreaPricesData.json');
+            const cars = await res.json();
+            carsPricesCatalog.init(cars);
+        })();
+    }
+
+    if (document.querySelector('.best_offers--china')) {
+
+        (async _ => {
+            const res = await fetch('/js/catalogsData/chinaData.json');
+            const cars = await res.json();
+            carsCatalog.init(cars);
+        })();
+    }
+
+    if (document.querySelector('.best_offers--china_prices')) {
+
+        (async _ => {
+            const res = await fetch('/js/catalogsData/chinaPricesData.json');
+            const cars = await res.json();
+            carsPricesCatalog.init(cars);
+        })();
+    }
+
 
 
     

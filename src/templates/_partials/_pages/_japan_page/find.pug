@@ -1,0 +1,33 @@
+section.section.find
+	.find__container.container 
+
+		.find__content
+
+			.find__img.find__img--japan
+				+img(`${assetsPath}/img/find_pic_1.png`, '', 'image')
+
+			.find__info
+				h2.find__info_title Находим и покупаем авто #[br.medium] по #[span.green самым выгодным] ценам
+				p.find__info_text Укажите интересующий авто, и мы вышлем вам подробный расчет с #[br.medium] услугами и суммами всех платежей. Работаем без скрытых платежей.
+
+			form.selection_form.find(data-form-id="find_japan_form", action="/mailer", data-mailer="")
+				input(type="hidden", name="form", value="Получить подробную смету (авто из Японии)")
+
+				h3.selection_form__title Получить подробную смету
+
+				.selection_form__inputs
+					.input_wrapper.input_wrapper--minimalistic(data-input-wrapper="")
+						input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+						label.input_wrapper__label Ваше имя
+						.input_wrapper__tooltip(data-input-tooltip="")
+					.input_wrapper.input_wrapper--minimalistic(data-input-wrapper="")
+						input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+						label.input_wrapper__label Номер телефона
+						.input_wrapper__tooltip(data-input-tooltip="")
+					.input_wrapper.input_wrapper--textarea(data-input-wrapper="")
+						textarea.input_wrapper__textarea(name="wishes", placeholder="Пожелания к авто (марка, модель, год, привод, объём, цвет и т.д.)")
+						
+				button.selection_form__btn.btn.btn--filled
+					span.btn__text Отправить
+				
+				p.selection_form__privacy Нажимая на кнопку, вы соглашаетесь #[br.desktop] с #[a.link(href="/privacy") политикой конфиденциальности]

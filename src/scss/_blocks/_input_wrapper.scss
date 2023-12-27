@@ -146,6 +146,14 @@ $bg-color-error: #FBE4E3;
 		transition: transform .25s, opacity .25s;
 
 		pointer-events: none;
+
+		@media(max-width: 1260px) {
+			font-size: em(16);
+		}
+
+		@media(max-width: 500px) {
+			font-size: em(14);
+		}
         
 		.input_wrapper--filled & {
 			left: $paddingSide;
@@ -218,7 +226,8 @@ $bg-color-error: #FBE4E3;
 		height: 100%;
 		padding: .875rem 0;
 		background: #fff;
-		border: 1px solid $c-grey;
+		border: none;
+		border-bottom: 1px solid $c-grey;
 		color: $c-black;
 		font-weight: 400;
 		font-size: em(18);

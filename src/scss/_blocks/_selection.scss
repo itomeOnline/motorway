@@ -1,0 +1,26 @@
+.selection {
+
+    &__content {
+        border-radius: 28px;
+        background: linear-gradient(180deg, #434343 0%, #151515 100%);
+
+        padding: em(40);
+        overflow: hidden;
+        
+        display: grid;
+        grid-template-columns: em(760) auto;
+
+
+        @media(max-width: 1260px) {
+            border-radius: 24px;
+            grid-template-columns: 100%;
+            gap: em(40);
+        }
+
+        @media(max-width: 500px) {
+            padding: em(24);
+            border-radius: 20px;
+            gap: em(28);
+        }
+    }	
+}

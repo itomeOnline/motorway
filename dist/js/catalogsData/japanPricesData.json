@@ -1,0 +1,158 @@
+[
+    {
+        "id" : 1,
+        "title": "до 0,6 млн. ₽",
+        "slug": "0.6",
+        "country": "japanPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "550 000",
+                "brand": "Suzuki Alto, 2020",
+                "params": "34 000 км | 660 cc | 49 лс"
+            },
+            {
+                "id": 2,
+                "price": "560 000",
+                "brand": "Daihatsu Move, 2020",
+                "params": "29 000 км | 660 cc | 52 лс"
+            },
+            {
+                "id": 3,
+                "price": "570 000",
+                "brand": "Honda N One, 2020",
+                "params": "24 000 км | 660 cc | 58 лс"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "title": "0,6 - 1 млн. ₽",
+        "slug": "1",
+        "country": "japanPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "950 000",
+                "brand": "Nissan Note, 2019",
+                "params": "35 000 км | 1200 cc | 79 лс"
+            },
+            {
+                "id": 2,
+                "price": "800 000",
+                "brand": "Suzuki Solio, 2020",
+                "params": "29 000 км | 1200 cc | 91 лс"
+            },
+            {
+                "id": 3,
+                "price": "900 000",
+                "brand": "Toyota Tank, 2020",
+                "params": "31 000 км | 1000 cc | 69 лс"
+            }
+        ]
+    },
+    {
+        "id" : 3,
+        "title": "1 - 1,4 млн. ₽",
+        "slug": "1.4",
+        "country": "japanPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 070 000",
+                "brand": "Honda Fit, 2021",
+                "params": "23 000 км | 1300 cc | 98 лс"
+            },
+            {
+                "id": 2,
+                "price": "1 060 000",
+                "brand": "Toyota Yaris, 2021",
+                "params": "24 000 км | 1500 cc | 120 лс"
+            },
+            {
+                "id": 3,
+                "price": "1 170 000",
+                "brand": "Subaru Impreza, 2021",
+                "params": "34 000 км | 1600 cc | 115 лс"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "title": "1,4 - 1,8 млн. ₽",
+        "slug": "1.8",
+        "country": "japanPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 650 000",
+                "brand": "Honda Vezel, 2020",
+                "params": "34 000 км | 1500 cc | 131 лс"
+            },
+            {
+                "id": 2,
+                "price": "1 550 000",
+                "brand": "Toyota C-HR, 2020",
+                "params": "29 000 км | 1200 cc | 116 лс"
+            },
+            {
+                "id": 3,
+                "price": "1 480 000",
+                "brand": "Mazda CX-3, 2021",
+                "params": "32 000 км | 1500 cc | 111 лс"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "title": "1,8 - 2,2 млн. ₽",
+        "slug": "2.2",
+        "country": "japanPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "1 900 000",
+                "brand": "Honda Stepwagon, 2020",
+                "params": "27 000 км | 1500 cc | 150 лс"
+            },
+            {
+                "id": 2,
+                "price": "1 850 000",
+                "brand": "Mazda CX-30, 2021",
+                "params": "23 000 км | 1800 cc | 116 лс"
+            },
+            {
+                "id": 3,
+                "price": "1 800 000",
+                "brand": "Suzuki Jimny Sierra, 2021",
+                "params": "15 000 км | 1500 cc | 102 лс"
+            }
+        ]
+    },
+    {
+        "id" : 6,
+        "title": "Более 2,2 млн. ₽",
+        "slug": "2.2+",
+        "country": "japanPrices",
+        "cars": [
+            {
+                "id": 1,
+                "price": "2 300 000",
+                "brand": "Honda C-RV, 2021",
+                "params": "23 000 км | 1500 cc | 190 лс"
+            },
+            {
+                "id": 2,
+                "price": "2 200 000",
+                "brand": "Honda Vezel, 2021",
+                "params": "17 000 км | 1500 cc | 118 лс"
+            },
+            {
+                "id": 3,
+                "price": "2 650 000",
+                "brand": "Subaru Forester, 2021",
+                "params": "23 000 км | 1800 cc | 177 лс"
+            }
+        ]
+    }
+]
